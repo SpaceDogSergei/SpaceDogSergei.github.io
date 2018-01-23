@@ -6,9 +6,19 @@
     <description>Recent content in Tags on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Wed, 24 Jan 2018 00:48:35 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://spacedogsergei.github.io/tags/</link>
+      <pubDate>Wed, 24 Jan 2018 00:48:35 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/tags/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
