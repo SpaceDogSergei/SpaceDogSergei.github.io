@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="テンパイ時の押し引き（２）　モデル"/>
+  <meta name="twitter:description" content="簡単のため今回はまず一対一のケースから考える。"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>テンパイ時の押し引き（２）　モデル &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        テンパイ時の押し引き（２）　モデル
+                    </h1>
+                    <h2 class="headline">
+                    Jan 25, 2018 01:34
+                    · 1026 words
+                    · 3 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E6%8A%BC%E3%81%97%E5%BC%95%E3%81%8D">押し引き</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#モデル設定">モデル設定</a></li>
+<li><a href="#期待収支">期待収支</a>
+<ul>
+<li>
+<ul>
+<li><a href="#攻める時の期待収支">攻める時の期待収支</a></li>
+<li><a href="#オリる時の期待収支">オリる時の期待収支</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#簡単な例">簡単な例</a></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <h1 id="モデル設定">モデル設定</h1>
+
+<p>簡単のため今回はまず一対一のケースから考える。</p>
+
+<p>設定とパラメターは以下の通り：</p>
+
+<ul>
+<li>自分と下家がテンパイしている。下家はアガリ牌以外全部ツモ切る。</li>
+<li>対面と上家がオリている。放銃はしない。</li>
+<li>鳴きは発生しない。</li>
+<li>\(t\): 巡目。1 から 21 までの整数</li>
+<li>\(p_{0,0}\): 1牌あたりの自分のツモ率</li>
+<li>\(p_{0,1}\): 1牌あたりの自分の出アガリ率</li>
+<li>\(p_{1,0}\): 1牌あたりの下家のツモ率</li>
+<li>\(p_{1,1}\): 1牌あたりの下家の出アガリ率</li>
+<li>\(r\): 現在自分の切る牌の放銃率</li>
+<li>\(w_t\): \(t\)巡目の自分のツモ率</li>
+<li>\(x_t\): \(t\)巡目の自分の出アガリ率（下家の放銃率）</li>
+<li>\(y_t\): \(t\)巡目の下家のツモ率</li>
+<li>\(z_t\): \(t\)巡目の下家の出アガリ率（自分の放銃率）</li>
+<li>\(A_t\): \(t\)巡目の攻める時の期待収支</li>
+<li>\(B_t\): \(t\)巡目のオリる時の期待収支</li>
+<li>\(W\): 自分のツモ時の期待収支</li>
+<li>\(X\): 自分の出アガリ時の期待収支</li>
+<li>\(Y\): 下家のツモ時の期待収支（マイナス）</li>
+<li>\(Z\): 下家の出アガリ時の期待収支（マイナス）</li>
+</ul>
+
+<h1 id="期待収支">期待収支</h1>
+
+<h3 id="攻める時の期待収支">攻める時の期待収支</h3>
+
+<p>つまりアガリ牌以外全部ツモ切る。パラメータの計算が次のようになる。
+\begin{eqnarray}
+  w_t &amp;=&amp; \begin{cases}
+    (1 - p_{1,0})(1 - p_{0,1})p_{0,0} + \phi w_{t+1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases} \\<br />
+  x_t &amp;=&amp; \begin{cases}
+    (1 - p_{1,0})p_{0,1} + \phi x_{t+1} &amp; (1 \leq t \lt 21) \\<br />
+    (1 - p_{1,0})p_{0,1} &amp; (t = 21)
+  \end{cases} \\<br />
+  y_t &amp;=&amp; \begin{cases}
+    p_{1,0} + \phi y_{t+1} &amp; (1 \leq t \lt 21) \\<br />
+    p_{1,0} &amp; (t = 21)
+  \end{cases} \\<br />
+  z_t &amp;=&amp; \begin{cases}
+    (1 - p_{1,0})(1 - p_{0,1})(1 - p_{0,0})p_{1,1} + \phi z_{t+1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases}
+\end{eqnarray}
+ただし、
+$$\phi=(1 - p_{1,0})(1 - p_{0,1})(1 - p_{0,0})(1 - p_{1,1})$$
+これを解くと
+\begin{eqnarray}
+  w_t &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_{1,0})(1 - p_{0,1})p_{0,0}}{1 - \phi} \\<br />
+  x_t &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_{1,0})p_{0,1}}{1 - \phi} + \phi^{21 - t}(1 - p_{1,0})p_{0,1} \\<br />
+  y_t &amp;=&amp; (1 - \phi^{21 - t})\frac{p_{1,0}}{1 - \phi} + \phi^{21 - t}p_{1,0} \\<br />
+  z_t &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_{1,0})(1 - p_{0,1})(1 - p_{0,0})p_{1,1}}{1 - \phi} \\<br />
+\end{eqnarray}
+\(r\)も入れると
+\begin{eqnarray}
+  w_t &amp;=&amp; (1 - r)(1 - \phi^{21 - t})\frac{(1 - p_{1,0})(1 - p_{0,1})p_{0,0}}{1 - \phi} \\<br />
+  x_t &amp;=&amp; (1 - r)((1 - \phi^{21 - t})\frac{(1 - p_{1,0})p_{0,1}}{1 - \phi} + \phi^{21 - t}(1 - p_{1,0})p_{0,1}) \\<br />
+  y_t &amp;=&amp; (1 - r)((1 - \phi^{21 - t})\frac{p_{1,0}}{1 - \phi} + \phi^{21 - t}p_{1,0}) \\<br />
+  z_t &amp;=&amp; (1 - r)(1 - \phi^{21 - t})\frac{(1 - p_{1,0})(1 - p_{0,1})(1 - p_{0,0})p_{1,1}}{1 - \phi} + r \\<br />
+\end{eqnarray}</p>
+
+<p>これを全部合わせて
+$$A_t = w_tW + x_tX + y_tY + z_tZ$$
+となる。</p>
+
+<h3 id="オリる時の期待収支">オリる時の期待収支</h3>
+
+<p>とりあえず放銃はしないと仮定する。パラメータの計算が次のようになる。
+\begin{eqnarray}
+  w_t &amp;=&amp; 0 \\<br />
+  x_t &amp;=&amp; 0 \\<br />
+  y_t &amp;=&amp; \begin{cases}
+    p_{1,0} + (1 - p_{1,0}) y_{t+1} &amp; (1 \leq t \lt 21) \\<br />
+    p_{1,0} &amp; (t = 21)
+  \end{cases} \\<br />
+  z_t &amp;=&amp; 0
+\end{eqnarray}
+これを解くと
+\begin{eqnarray}
+  w_t &amp;=&amp; 0 \\<br />
+  x_t &amp;=&amp; 0 \\<br />
+  y_t &amp;=&amp; 1 - \phi^{22 - t}p_{1,0} \\<br />
+  z_t &amp;=&amp; 0 \\<br />
+\end{eqnarray}
+これを全部合わせて
+$$B_t = y_tY$$
+となる。</p>
+
+<h1 id="簡単な例">簡単な例</h1>
+
+<p>数式ばかりで少し疲れたかもしれない。ここで簡単な一例を見てみよう。</p>
+
+<p>状況：</p>
+
+<ul>
+<li>自分：<img src="/imgs/mj_pai/2m1.png"><img src="/imgs/mj_pai/m2.png"><img src="/imgs/mj_pai/m3.png">
+<img src="/imgs/mj_pai/2p2.png"><img src="/imgs/mj_pai/p3.png"><img src="/imgs/mj_pai/p4.png">
+<img src="/imgs/mj_pai/s3.png"><img src="/imgs/mj_pai/s5.png"><img src="/imgs/mj_pai/s6.png"><img src="/imgs/mj_pai/s7.png"><img src="/imgs/mj_pai/s8.png"><img src="/imgs/mj_pai/j1.png"><img src="/imgs/mj_pai/j1.png">
+<img src="/imgs/mj_pai/p5.png"></li>
+<li>下家：<img src="/imgs/mj_pai/j5.png"><img src="/imgs/mj_pai/2j5.png"><img src="/imgs/mj_pai/j5.png">
+<img src="/imgs/mj_pai/2j6.png"><img src="/imgs/mj_pai/j6.png"><img src="/imgs/mj_pai/j6.png">
+<img src="/imgs/mj_pai/2j7.png"><img src="/imgs/mj_pai/j7.png"><img src="/imgs/mj_pai/j7.png">
+<img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"></li>
+</ul>
+
+<p>下家がリャンメンテンパイしていて、対面と上家がオリていて放銃はしないとする。どんなケースでは押したほうが有利なのか？</p>
+
+<p>パラメータが以下のように近似できる。</p>
+
+<ul>
+<li>\(p_{0,0} = p_{0,1} \fallingdotseq \frac{1}{34}\)</li>
+<li>\(p_{1,0} = p_{1,1} \fallingdotseq \frac{2}{34}\)</li>
+<li>\(r = \frac{2}{34} \)</li>
+<li>\(W = 57, X = 32, Y = -89, Z = -88\)。</li>
+</ul>
+
+<p>以上の条件下で\(A_t\)と\(B_t\)のグラフを示す。</p>
+
+
+<figure >
+    
+        <img src="/imgs/3.png" width="100%" />
+    
+    
+</figure>
+
+
+<p>12 巡目より前では押したほうが有利だと分かる。</p>
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f3%2f - %e3%83%86%e3%83%b3%e3%83%91%e3%82%a4%e6%99%82%e3%81%ae%e6%8a%bc%e3%81%97%e5%bc%95%e3%81%8d%ef%bc%88%ef%bc%92%ef%bc%89%e3%80%80%e3%83%a2%e3%83%87%e3%83%ab by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
