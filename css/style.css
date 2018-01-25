@@ -472,10 +472,6 @@ thead th, th {
 }
 
 img {
-<<<<<<< HEAD
-=======
-    /* width: 100%; */
->>>>>>> e9f527353a7229e79a2eab64fb32bfd47afd895b
     max-width: 100%;
     border-radius: 3px;
 }
