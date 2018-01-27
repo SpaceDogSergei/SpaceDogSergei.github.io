@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="4"/>
+  <meta name="twitter:description" content="今回は自分以外に二人が攻めるケースを考える。"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>4 &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        4
+                    </h1>
+                    <h2 class="headline">
+                    Jan 27, 2018 17:28
+                    · 1731 words
+                    · 4 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/"></a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#期待収支">期待収支</a>
+<ul>
+<li>
+<ul>
+<li><a href="#攻める時の期待収支">攻める時の期待収支</a></li>
+<li><a href="#オリる時の期待収支">オリる時の期待収支</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#簡単な例">簡単な例</a></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <p>今回は自分以外に二人が攻めるケースを考える。</p>
+
+<p>前回とほぼ同じだが設定とパラメターは以下の通り：</p>
+
+<ul>
+<li>自分、下家と対面がテンパイしている。下家と対面はアガリ牌以外全部ツモ切る。</li>
+<li>上家がオリている。放銃はしない。</li>
+<li>鳴きは発生しない。</li>
+<li>\(t\): 巡目。1 から 21 までの整数</li>
+<li>\(p_0\): 1牌あたりの自分のツモ率</li>
+<li>\(\widetilde{p}_0\): 1牌あたりの自分の出アガリ率</li>
+<li>\(p_1\): 1牌あたりの下家のツモ率</li>
+<li>\(\widetilde{p}_1\): 1牌あたりの対面の出アガリ率</li>
+<li>\(p_2\): 1牌あたりの下家のツモ率</li>
+<li>\(\widetilde{p}_2\): 1牌あたりの対面の出アガリ率</li>
+<li>\(r_1\): 現在自分が切ろうとする牌の下家への放銃率</li>
+<li>\(r_2\): 現在自分が切ろうとする牌の対面への放銃率</li>
+<li>\(w_{0,t}\): \(t\)巡目で自分のツモ率</li>
+<li>\(\widetilde{w}_{0,t}\): \(t\)巡目で自分の出アガリ率</li>
+<li>\(w_{1,t}\): \(t\)巡目で下家のツモ率</li>
+<li>\(\widetilde{w}_{1,t}\): \(t\)巡目で下家の自分からの出アガリ率</li>
+<li>\(\widehat{w}_{1,t}\): \(t\)巡目で下家の対面からの出アガリ率</li>
+<li>\(w_{2,t}\): \(t\)巡目で対面のツモ率</li>
+<li>\(\widetilde{w}_{2,t}\): \(t\)巡目で対面の自分からの出アガリ率</li>
+<li>\(\widehat{w}_{2,t}\): \(t\)巡目で対面の下家からの出アガリ率</li>
+<li>\(A_t\): \(t\)巡目で攻める時の期待収支</li>
+<li>\(B_t\): \(t\)巡目でオリる時の期待収支</li>
+<li>\(W_0\): 自分のツモ時の期待収支</li>
+<li>\(\widetilde{W}_0\): 自分の出アガリ時の期待収支</li>
+<li>\(W_1\): 下家のツモ時の期待収支（マイナス）</li>
+<li>\(\widetilde{W}_1\): 対面の自分から出アガリ時の期待収支（マイナス）</li>
+<li>\(\widehat{W}_1\): 対面の下家から出アガリ時の期待収支（マイナス）</li>
+<li>\(W_2\): 下家のツモ時の期待収支（マイナス）</li>
+<li>\(\widetilde{W}_2\): 下家の自分から出アガリ時の期待収支（マイナス）</li>
+<li>\(\widehat{W}_2\): 下家の対面から出アガリ時の期待収支（マイナス）</li>
+</ul>
+
+<h1 id="期待収支">期待収支</h1>
+
+<h3 id="攻める時の期待収支">攻める時の期待収支</h3>
+
+<p>数式が少し煩雑になるが前回と同じようにやればいい。
+\begin{eqnarray}
+  w_{0,t} &amp;=&amp; \begin{cases}
+    \alpha_0 + \phi w_{0,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widetilde{w}_{0,t} &amp;=&amp; \begin{cases}
+    \widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)] + \phi\widetilde{w}_{0,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    \widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)] &amp; (t = 21)
+  \end{cases} \\<br />
+  w_{1,t} &amp;=&amp; \begin{cases}
+    \alpha_1 + \phi w_{1,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    \alpha_1 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widetilde{w}_{1,t} &amp;=&amp; \begin{cases}
+    \widetilde\alpha_1 + \phi\widetilde{w}_{1,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widehat{w}_{1,t} &amp;=&amp; \begin{cases}
+    \widetilde\alpha_1(1 - \widetilde{p}_1)(1 - p_0) + \phi\widetilde{w}_{1,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    \widetilde\alpha_1 &amp; (t = 21)
+  \end{cases} \\<br />
+  w_{2,t} &amp;=&amp; \begin{cases}
+    \alpha_2 + \phi w_{2,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    \alpha_2 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widetilde{w}_{2,t} &amp;=&amp; \begin{cases}
+    \widetilde\alpha_2 + \phi\widehat{w}_{2,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widehat{w}_{2,t} &amp;=&amp; \begin{cases}
+    \widetilde\alpha_2(1 - \widetilde{p}_2)(1 - \widetilde{p}_0)^2(1 - p_2)(1 - \widetilde{p}_1)^2(1 - p_0) + \phi\widetilde{w}_{2,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    \widetilde\alpha_2 &amp; (t = 21)
+  \end{cases}
+\end{eqnarray}
+ただし、
+\begin{eqnarray}
+\phi &amp;=&amp; (1 - p_0)(1 - \widetilde{p}_0)^2(1 - p_1)(1 - \widetilde{p}_1)^2(1 - p_2)(1 - \widetilde{p}_2)^2 \\<br />
+\alpha_0 &amp;=&amp; p_0(1 - \widetilde{p}_0)^2(1 - p_1)(1 - \widetilde{p}_1)(1 - p_2)(1 - \widetilde{p}_2) \\<br />
+\widetilde\alpha_0 &amp;=&amp; \widetilde{p}_0(1 - p_1)(1 - \widetilde{p}_2) \\<br />
+\alpha_1 &amp;=&amp; p_1 \\<br />
+\widetilde\alpha_1 &amp;=&amp; (1 - \widetilde{p}_0)^2(1 - p_1)\widetilde{p}_1(1 - p_2)(1 - \widetilde{p}_2) \\<br />
+\alpha_2 &amp;=&amp; (1 - \widetilde{p}_0)(1 - p_1)p_2(1 - \widetilde{p}_2) \\<br />
+\widetilde\alpha_2 &amp;=&amp; (1 - p_1)\widetilde{p}_2
+\end{eqnarray}
+これを解くと
+\begin{eqnarray}
+  w_{0,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\alpha_0}{1 - \phi} \\<br />
+  \widetilde{w}_{0,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)]}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)] \\<br />
+  w_{1,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\alpha_1}{1 - \phi} + \phi^{21 - t}\alpha_1 \\<br />
+  \widetilde{w}_{1,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\widetilde\alpha_1}{1 - \phi} \\<br />
+  \widehat{w}_{1,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\widetilde\alpha_1(1 - \widetilde{p}_1)(1 - p_0)}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_1 \\<br />
+  w_{2,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\alpha_2}{1 - \phi} + \phi^{21 - t}\alpha_2 \\<br />
+  \widetilde{w}_{2,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\widetilde\alpha_2}{1 - \phi} \\<br />
+  \widehat{w}_{2,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{\widetilde\alpha_2(1 - \widetilde{p}_2)(1 - \widetilde{p}_0)^2(1 - p_2)(1 - \widetilde{p}_1)^2(1 - p_0)}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_2
+\end{eqnarray}
+\(r\)を入れて
+\begin{eqnarray}
+  w_{0,t} &amp;=&amp; (1 - r_1)(1 - r_2)(1 - \phi^{21 - t})\frac{\alpha_0}{1 - \phi} \\<br />
+  \widetilde{w}_{0,t} &amp;=&amp; (1 - r_1)(1 - r_2)\langle(1 - \phi^{21 - t})\frac{\widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)]}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_0[1 + (1 - \widetilde{p}_0)(1 - p_2)]\rangle \\<br />
+  w_{1,t} &amp;=&amp; (1 - r_1)(1 - r_2)[(1 - \phi^{21 - t})\frac{\alpha_1}{1 - \phi} + \phi^{21 - t}\alpha_1] \\<br />
+  \widetilde{w}_{1,t} &amp;=&amp; (1 - r_1)(1 - r_2)(1 - \phi^{21 - t})\frac{\widetilde\alpha_1}{1 - \phi} + r_1(1 - r_2) \\<br />
+  \widehat{w}_{1,t} &amp;=&amp; (1 - r_1)(1 - r_2)[(1 - \phi^{21 - t})\frac{\widetilde\alpha_1(1 - \widetilde{p}_1)(1 - p_0)}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_1] \\<br />
+  w_{2,t} &amp;=&amp; (1 - r_1)(1 - r_2)[(1 - \phi^{21 - t})\frac{\alpha_2}{1 - \phi} + \phi^{21 - t}\alpha_2] \\<br />
+  \widetilde{w}_{2,t} &amp;=&amp; (1 - r_1)(1 - r_2)(1 - \phi^{21 - t})\frac{\widetilde\alpha_2}{1 - \phi} + r_2 \\<br />
+  \widehat{w}_{2,t} &amp;=&amp; (1 - r_1)(1 - r_2)[(1 - \phi^{21 - t})\frac{\widetilde\alpha_2(1 - \widetilde{p}_2)(1 - \widetilde{p}_0)^2(1 - p_2)(1 - \widetilde{p}_1)^2(1 - p_0)}{1 - \phi} + \phi^{21 - t}\widetilde\alpha_2]
+\end{eqnarray}</p>
+
+<p>これを全部合わせて
+$$A_t = w_{0,t}W + \widetilde{w}_{0,t}\widetilde{W}_0 + w_{1,t}W_1 + \widetilde{w}_{1,t}\widetilde{W}_1 + \widehat{w}_{1,t}\widehat{W}_1 + w_{2,t}W_2 + \widetilde{w}_{2,t}\widetilde{W}_2 + \widehat{w}_{2,t}\widehat{W}_2$$
+となる。</p>
+
+<h3 id="オリる時の期待収支">オリる時の期待収支</h3>
+
+<p>実質二人の攻め合いのため、最終巡目以外の各種のアガリ率は前回の攻める時と同じになる（自分が対面になるだけ）。
+\begin{eqnarray}
+  w_{1,t} &amp;=&amp; \begin{cases}
+    p_1 + \phi w_{1,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    p_1 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widehat{w}_{1,t} &amp;=&amp; \begin{cases}
+    (1 - p_1)(1 - \widehat{p}_2)(1 - p_2)\widehat{p}_1 + \phi \widehat{w}_{1,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    (1 - p_1)(1 - \widehat{p}_2)(1 - p_2)\widehat{p}_1 &amp; (t = 21)
+  \end{cases} \\<br />
+  w_{2,t} &amp;=&amp; \begin{cases}
+    (1 - p_1)(1 - \widehat{p}_2)p_2 + \phi w_{2,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    (1 - p_1)(1 - \widehat{p}_2)p_2 &amp; (t = 21)
+  \end{cases} \\<br />
+  \widehat{w}_{2,t} &amp;=&amp; \begin{cases}
+    (1 - p_1)\widehat{p}_2 + \phi \widehat{w}_{2,t+1} &amp; (1 \leq t \lt 21) \\<br />
+    (1 - p_1)\widehat{p}_2 &amp; (t = 21)
+  \end{cases}
+\end{eqnarray}
+ただし、
+$$\phi=(1 - p_1)(1 - \widehat{p}_1)(1 - p_2)(1 - \widehat{p}_2)$$
+これを解くと
+\begin{eqnarray}
+  w_{1,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{p_1}{1 - \phi} + \phi^{21 - t}p_1 \\<br />
+  \widehat{w}_{1,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_1)\widehat{p}_1(1 - p_2)(1 - \widehat{p}_2)}{1 - \phi} + \phi^{21 - t}(1 - p_1)\widehat{p}_1(1 - p_2)(1 - \widehat{p}_2) \\<br />
+  w_{2,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_1)p_2(1 - \widehat{p}_2)}{1 - \phi} + \phi^{21 - t}(1 - p_1)p_2(1 - \widehat{p}_2) \\<br />
+  \widehat{w}_{2,t} &amp;=&amp; (1 - \phi^{21 - t})\frac{(1 - p_1)\widehat{p}_2}{1 - \phi} + \phi^{21 - t}(1 - p_1)\widehat{p}_2
+\end{eqnarray}
+これを全部合わせて
+$$B_t = w_{1,t}W_1 + \widehat{w}_{1,t}\widehat{W}_1 + w_{2,t}W_2 + \widehat{w}_{2,t}\widehat{W}_2$$
+となる。</p>
+
+<h1 id="簡単な例">簡単な例</h1>
+
+<p>状況：</p>
+
+<ul>
+<li>自分：<img src="/imgs/mj_pai/2m1.png"><img src="/imgs/mj_pai/m2.png"><img src="/imgs/mj_pai/m3.png">
+<img src="/imgs/mj_pai/2p2.png"><img src="/imgs/mj_pai/p3.png"><img src="/imgs/mj_pai/p4.png">
+<img src="/imgs/mj_pai/s3.png"><img src="/imgs/mj_pai/s5.png"><img src="/imgs/mj_pai/s6.png"><img src="/imgs/mj_pai/s7.png"><img src="/imgs/mj_pai/s8.png"><img src="/imgs/mj_pai/j1.png"><img src="/imgs/mj_pai/j1.png">
+<img src="/imgs/mj_pai/p5.png"></li>
+<li>下家：<img src="/imgs/mj_pai/j5.png"><img src="/imgs/mj_pai/2j5.png"><img src="/imgs/mj_pai/j5.png">
+<img src="/imgs/mj_pai/2j6.png"><img src="/imgs/mj_pai/j6.png"><img src="/imgs/mj_pai/j6.png">
+<img src="/imgs/mj_pai/2j7.png"><img src="/imgs/mj_pai/j7.png"><img src="/imgs/mj_pai/j7.png">
+<img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"></li>
+<li>対面：<img src="/imgs/mj_pai/2j1.png"><img src="/imgs/mj_pai/j1.png"><img src="/imgs/mj_pai/j1.png">
+<img src="/imgs/mj_pai/j2.png"><img src="/imgs/mj_pai/j2.png"><img src="/imgs/mj_pai/2j2.png">
+<img src="/imgs/mj_pai/2j3.png"><img src="/imgs/mj_pai/j3.png"><img src="/imgs/mj_pai/j3.png">
+<img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"></li>
+</ul>
+
+<p>下家と対面がリャンメンテンパイしていて（かつ対面が北の対子を持っている）、上家がオリていて放銃はしないとする。どんなケースでは押したほうが有利なのか？</p>
+
+<p>パラメータが以下のように近似できる。</p>
+
+<ul>
+<li>\(p_0 = \widetilde{p}_0 \fallingdotseq \frac{1}{34} \)</li>
+<li>\(p_1 = \widetilde{p}_1 \fallingdotseq \frac{2}{34} \)</li>
+<li>\(p_2 = \widetilde{p}_2 \fallingdotseq \frac{2}{34} \)</li>
+<li>\(r_1 = r_2 \fallingdotseq \frac{2}{34} \)</li>
+<li>\(W_0 = 57, \widetilde{W}_0 = 32 \)</li>
+<li>\(W_1 = -89, \widetilde{W}_1 = -88, \widehat{W}_1 = -8 \)</li>
+<li>\(W_2 = -74, \widetilde{W}_2 = -75, \widehat{W}_2 = -8 \)</li>
+</ul>
+
+<p>以上の条件下で\(A_t\)と\(B_t\)のグラフを示す。</p>
+
+
+<figure >
+    
+        <img src="/imgs/4.png" width="100%" />
+    
+    
+</figure>
+
+
+<p>常に押したほうが有利だと分かる。</p>
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f4%2f - 4 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

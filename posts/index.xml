@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 25 Jan 2018 01:34:50 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jan 2018 17:28:30 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>4</title>
+      <link>https://spacedogsergei.github.io/posts/4/</link>
+      <pubDate>Sat, 27 Jan 2018 17:28:30 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/4/</guid>
+      <description>&lt;p&gt;今回は自分以外に二人が攻めるケースを考える。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>テンパイ時の押し引き（２）　モデル（１）</title>
