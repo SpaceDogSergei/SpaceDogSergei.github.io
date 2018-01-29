@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="電磁気学　読書ノート（１）"/>
+  <meta name="twitter:description" content="かなり分かりやすいと評判がある砂川先生のこの本を選んだ。 まだ第 1 章しか読んでないが、とにかく分かりやすい。なんなら中国語の本よりもすらすら読"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>電磁気学　読書ノート（１） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        電磁気学　読書ノート（１）
+                    </h1>
+                    <h2 class="headline">
+                    Jan 30, 2018 03:38
+                    · 730 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6">電磁気学</a>
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E8%AA%AD%E6%9B%B8%E3%83%8E%E3%83%BC%E3%83%88">読書ノート</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#1-クーロンの法則">§1　クーロンの法則</a></li>
+<li><a href="#2-遠隔作用と近接作用">§2　遠隔作用と近接作用</a></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<p>かなり分かりやすいと評判がある砂川先生のこの本を選んだ。</p>
+
+<p><a target="_blank"  href="https://www.amazon.co.jp/gp/product/4000077449/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4000077449&linkCode=as2&tag=sputnik2-22&linkId=fafdbd0b3faa44910c0c8efe60b64761"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4000077449&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=sputnik2-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=sputnik2-22&l=am2&o=9&a=4000077449" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>まだ第 1 章しか読んでないが、とにかく分かりやすい。なんなら中国語の本よりもすらすら読めると感じた。今回はとりあえず第 1 章の §1 と §2 だけ。</p>
+
+<h1 id="1-クーロンの法則">§1　クーロンの法則</h1>
+
+<p>この辺はまだ高校程度の知識と言ってもいいだろう。この本で最初に出てくるクーロンの法則は：</p>
+
+<p>$$F = k \frac{q \cdot Q}{R^{2 + \delta}}$$</p>
+
+<p>普段は基本 \(\delta\) を書かないけど、その場合 \(2\) が物理的（？）な数字になり、つまり有効数字を持つ。</p>
+
+<p>\(\mathbf{z_0}\) と \(\mathbf{z}\) を点電荷 \(q\) と \(Q\) の位置ベクトルとして、ベクトル形式で表現すると</p>
+
+<p>$$\mathbf{F}(\mathbf{z_0}) = \frac{q}{4 \pi \varepsilon_0} \frac{Q(\mathbf{z_0} - \mathbf{z})}{|\mathbf{z_0} - \mathbf{z}|^3}$$</p>
+
+<p>になる。点電荷が \(n\) 個あるときそれぞれの力が独立に考えても良い。すなわち</p>
+
+<p>$$\mathbf{F}(\mathbf{z_0}) = \frac{q}{4 \pi \varepsilon_0} \sum_{i = 1}^n \frac{Q_i(\mathbf{z_0} - \mathbf{z})}{|\mathbf{z_0} - \mathbf{z}|^3}$$</p>
+
+<p>である。</p>
+
+<h1 id="2-遠隔作用と近接作用">§2　遠隔作用と近接作用</h1>
+
+<p>万有引力のように媒質を通してではなく物質の間に直接作用するのが遠隔作用であり、逆にゴム棒の中の歪みのように次々と伝わるのが近接作用である。電磁気学の理論では近接作用の立場に基づく。</p>
+
+<p>近接作用の考え方で、電荷 \(Q\) のまわりの空間はある意味で歪んでいて、たまたまに電荷 \(q\) がその歪んだ空間に置かれて、それに力が作用する。こうしてクーロン力は以下のように分解できる。<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></p>
+
+<p>\begin{eqnarray}
+\mathbf{F}(\mathbf{z_0}) &amp;=&amp; q \mathbf{E}(\mathbf{x} = \mathbf{z_0}) \\<br />
+\mathbf{E}(\mathbf{x}) &amp;=&amp; \frac{1}{4 \pi \varepsilon_0} \frac{Q(\mathbf{x} - \mathbf{z_i})}{|\mathbf{x} - \mathbf{z_i}|^3}
+\end{eqnarray}</p>
+
+<p>§1 と同じく、多数の点電荷があるときこの「歪み」は</p>
+
+<p>$$\mathbf{E}(\mathbf{x}) = \frac{1}{4 \pi \varepsilon_0} \sum_{i = 1}^n \frac{Q(\mathbf{x} - \mathbf{z_i})}{|\mathbf{x} - \mathbf{z_i}|^3}$$</p>
+
+<p>になる。\(\mathbf{E}(\mathbf{x})\) が位置 \(\mathbf{x}\) においての歪みであって、<strong>電場</strong> という。</p>
+
+<p>ここで、電荷が連続的に分布しているときを考える。微小の領域の電荷量 \(Q_i = \rho(\mathbf{x_i}) \Delta^3x_i\) により電荷密度で表すことができる。</p>
+
+<p>$$\mathbf{E}(\mathbf{x}) = \frac{1}{4 \pi \varepsilon_0} \int_{-\infty}^{\infty} \frac{\rho(\mathbf{x&rsquo;})(\mathbf{x} - \mathbf{x&rsquo;})}{|\mathbf{x} - \mathbf{x&rsquo;}|^3}d^3x&rsquo;$$</p>
+
+<p>デルタ関数を使うと \(\displaystyle \rho(\mathbf{x}) = \sum_{i = 1}^n Q_i \delta^3(\mathbf{x} - \mathbf{z_i})\) と書くことができ、連続形式に代入すると離散形式に戻せる。</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">なんらかの粒子の位置は \(\mathbf{z}\) で、単に任意の場所を指定するのは \(\mathbf{x}\) または \(\mathbf{r}\) と表現する。
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f6%2f - %e9%9b%bb%e7%a3%81%e6%b0%97%e5%ad%a6%e3%80%80%e8%aa%ad%e6%9b%b8%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%ef%bc%91%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
