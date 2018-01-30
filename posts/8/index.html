@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="電磁気学　読書ノート（３）"/>
+  <meta name="twitter:description" content="§4　静電ポテンシャル
+
+"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>電磁気学　読書ノート（３） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        電磁気学　読書ノート（３）
+                    </h1>
+                    <h2 class="headline">
+                    Jan 30, 2018 10:22
+                    · 530 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6">電磁気学</a>
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E8%AA%AD%E6%9B%B8%E3%83%8E%E3%83%BC%E3%83%88">読書ノート</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#4-静電ポテンシャル">§4　静電ポテンシャル</a>
+<ul>
+<li><a href="#ストークスの定理">ストークスの定理</a>
+<ul>
+<li><a href="#線積分">線積分</a></li>
+<li><a href="#回転">回転</a></li>
+<li><a href="#ストークスの定理-1">ストークスの定理</a></li>
+</ul></li>
+<li><a href="#静電ポテンシャル">静電ポテンシャル</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    <h1 id="4-静電ポテンシャル">§4　静電ポテンシャル</h1>
+
+<p></p>
+
+<h2 id="ストークスの定理">ストークスの定理</h2>
+
+<h3 id="線積分">線積分</h3>
+
+<p>面積分と似たような感じでの定義</p>
+
+<p>$$\int_C \mathbf{E}(\mathbf{x}) \cdot d\mathbf{x} = \sum_P^Q \mathbf{E}(\mathbf{x_i}) \cdot \Delta \mathbf{x_i}$$</p>
+
+<p>すなわちベクトル要素 \(\mathbf{E}\) と方向ベクトル \(\mathbf{x}\) の内積を曲線 \(C\) 上で積分する。</p>
+
+<p>静電場の中で正電荷 \(e\) をもつ点電荷を曲線 \(C\) に沿って位置 \(\mathbf{z}_p\) から位置 \(\mathbf{z}_Q\) まで移動させるに必要な仕事の量は線積分で表すと</p>
+
+<p>\begin{eqnarray}
+W &amp;=&amp; \int_C \mathbf{F}(\mathbf{z}) \cdot d\mathbf{z} \\<br />
+&amp;=&amp; -e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathbf{E}(\mathbf{z}) \cdot d\mathbf{z}
+\end{eqnarray}</p>
+
+<p>になる。</p>
+
+<h3 id="回転">回転</h3>
+
+<p>ナブラとベクトル場の外積。 \(\mathrm{rot} \mathbf{E}(\mathbf{x})\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
+
+<p>$$\mathrm{rot} f(\mathbf{x}) = \biggl( \frac{\partial E_z(\mathbf{x})}{\partial y} - \frac{\partial E_y(\mathbf{x})}{\partial z}, \frac{\partial E_x(\mathbf{x})}{\partial z} - \frac{\partial E_z(\mathbf{x})}{\partial x}, \frac{\partial E_y(\mathbf{x})}{\partial x} - \frac{\partial E_x(\mathbf{x})}{\partial y} \biggr)$$</p>
+
+<p>である。</p>
+
+<h3 id="ストークスの定理-1">ストークスの定理</h3>
+
+<p>任意のベクトル場 \(\mathbf{E}(\mathbf{x})\) に対して
+$$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot} \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS$$</p>
+
+<p>が成立する。ただし \(C\) は閉曲線である。（証明は P42 から）</p>
+
+<h2 id="静電ポテンシャル">静電ポテンシャル</h2>
+
+<p>電荷が連続的に分布しているときの静電場</p>
+
+<p>$$\mathbf{E}(\mathbf{x}) = \frac{1}{4 \pi \varepsilon_0} \int_{-\infty}^{\infty} \frac{\rho(\mathbf{x&rsquo;})(\mathbf{x} - \mathbf{x&rsquo;})}{|\mathbf{x} - \mathbf{x&rsquo;}|^3}d^3x&rsquo;$$</p>
+
+<p>の回転</p>
+
+<p>$$\mathrm{rot} \mathbf{E}(\mathbf{x}) = 0$$</p>
+
+<p>である（証明は P49 で）。つまり線積分</p>
+
+<p>$$\int_C \mathbf{E}(\mathbf{x}) \cdot d\mathbf{x}$$</p>
+
+<p>が途中の道筋に依存しない。また、ある関数 \(\phi(\mathbf{x})\) の勾配で表すこともできる。</p>
+
+<p>$$\mathbf{E}(\mathbf{x}) = -\mathrm{grad} \phi(\mathbf{x})$$</p>
+
+<p>これが静電ポテンシャル \(\phi(\mathbf{x})\) の定義である。この積分はそんなに難しくなく</p>
+
+<p>$$\phi(\mathbf{x}) = \frac{1}{4 \pi \varepsilon_0} \int_{-\infty}^{\infty} \frac{\rho(\mathbf{x&rsquo;})}{|\mathbf{x} - \mathbf{x&rsquo;}|}d^3x&rsquo;$$</p>
+
+<p>と簡単に解ける（積分定数を除く）。最初に出てきた式に代入し、正電荷 \(e\) をもつ点電荷を位置 \(\mathbf{z}_p\) から位置 \(\mathbf{z}_Q\) まで移動させるに外部からなすべき仕事の量は</p>
+
+<p>\begin{eqnarray}
+W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad} \phi(\mathbf{z}) \cdot d\mathbf{z} \\<br />
+&amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} d\phi(\mathbf{z}) \\<br />
+&amp;=&amp; e[\phi(\mathbf{z}_q) - \phi(\mathbf{z}_p)]
+\end{eqnarray}</p>
+
+<p>で与えられることがわかる。</p>
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f8%2f - %e9%9b%bb%e7%a3%81%e6%b0%97%e5%ad%a6%e3%80%80%e8%aa%ad%e6%9b%b8%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%ef%bc%93%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
