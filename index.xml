@@ -17,9 +17,7 @@
       <pubDate>Tue, 30 Jan 2018 10:22:31 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/8/</guid>
-      <description>&lt;h1 id=&#34;4-静電ポテンシャル&#34;&gt;§4　静電ポテンシャル&lt;/h1&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>§4 静電ポテンシャル ストークスの定理 線積分 面積分と似たような感じでの定義 $$\int_C \mathbf{E}(\mathbf{x}) \cdot d\mathbf{x} = \sum_P^Q \mathbf{E}(\mathbf{x_i}) \cdot \Delta \mathbf{x_i}$$ すなわちベクトル要素 \(\mathbf{E}\) と方向ベクトル \(\mathbf{x}\) の内積を曲</description>
     </item>
     
     <item>
@@ -28,9 +26,7 @@
       <pubDate>Tue, 30 Jan 2018 06:20:44 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/7/</guid>
-      <description>&lt;h1 id=&#34;3-ガウスの法則&#34;&gt;§3　ガウスの法則&lt;/h1&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>§3 ガウスの法則 ベクトル解析については「電磁場とベクトル解析」の解説が非常に詳しい。 積分形のガウスの法則 面積分 （ここでの）ガウスの法則の本質</description>
     </item>
     
     <item>
@@ -39,11 +35,7 @@
       <pubDate>Tue, 30 Jan 2018 03:38:00 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/6/</guid>
-      <description>&lt;p&gt;かなり分かりやすいと評判がある砂川先生のこの本を選んだ。&lt;/p&gt;
-
-&lt;p&gt;まだ第 1 章しか読んでないが、とにかく分かりやすい。なんなら中国語の本よりもすらすら読めると感じた。今回はとりあえず第 1 章の §1 と §2 だけ。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>かなり分かりやすいと評判がある砂川先生のこの本を選んだ。 まだ第 1 章しか読んでないが、とにかく分かりやすい。なんなら中国語の本よりもすらすら読</description>
     </item>
     
     <item>
@@ -74,11 +66,7 @@
       <pubDate>Thu, 25 Jan 2018 01:34:50 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/3/</guid>
-      <description>&lt;h1 id=&#34;モデル設定&#34;&gt;モデル設定&lt;/h1&gt;
-
-&lt;p&gt;簡単のため今回はまず一対一のケースから考える。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>モデル設定 簡単のため今回はまず一対一のケースから考える。 設定とパラメターは以下の通り： 自分と下家がテンパイしている。下家はアガリ牌以外全部ツ</description>
     </item>
     
     <item>
@@ -87,9 +75,7 @@
       <pubDate>Wed, 24 Jan 2018 20:36:39 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/2/</guid>
-      <description>&lt;p&gt;このテーマについて研究する必要があるのか？と思っている人がいるかもしれない。確かにちゅんまの放銃と被ツモ時の失点がほぼ同じのため、テンパイすればどんなケースでも最後まで押し切る人が少なくない。これがちゅんまが「攻め麻雀」と呼ばれているゆえでもある。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>このテーマについて研究する必要があるのか？と思っている人がいるかもしれない。確かにちゅんまの放銃と被ツモ時の失点がほぼ同じのため、テンパイす</description>
     </item>
     
     <item>
@@ -98,9 +84,7 @@
       <pubDate>Wed, 24 Jan 2018 17:02:13 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/1/</guid>
-      <description>&lt;p&gt;「科学する麻雀」をはじめ、リーチ麻雀の理論的研究が十数年やられてきたが、ちゅんま（&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E4%B8%AD%E5%9B%BD%E9%BA%BB%E9%9B%80&#34;&gt;国際公式ルール麻雀&lt;/a&gt;）に関してはないに等しい。ずっと前からやりたかったがどうもやる気が出ない。物理に転向することをきっかけにブログを始めたので、ついでにこれもやろうという軽い気持ちでスタートした。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>「科学する麻雀」をはじめ、リーチ麻雀の理論的研究が十数年やられてきたが、ちゅんま（国際公式ルール麻雀）に関してはないに等しい。ずっと前からや</description>
     </item>
     
   </channel>
