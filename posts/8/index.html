@@ -72,7 +72,7 @@
                     </h1>
                     <h2 class="headline">
                     Jan 30, 2018 10:22
-                    · 530 words
+                    · 885 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -101,6 +101,16 @@
 <li><a href="#ストークスの定理-1">ストークスの定理</a></li>
 </ul></li>
 <li><a href="#静電ポテンシャル">静電ポテンシャル</a></li>
+</ul></li>
+<li><a href="#5-静電場の基本法則">§5　静電場の基本法則</a>
+<ul>
+<li>
+<ul>
+<li><a href="#ラプラシアン">ラプラシアン</a></li>
+<li><a href="#ポアッソンの方程式">ポアッソンの方程式</a></li>
+<li><a href="#ポアッソンの方程式-1">ポアッソンの方程式</a></li>
+<li><a href="#静電場の基本法則">静電場の基本法則</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -133,16 +143,16 @@ W &amp;=&amp; \int_C \mathbf{F}(\mathbf{z}) \cdot d\mathbf{z} \\<br />
 
 <h3 id="回転">回転</h3>
 
-<p>ナブラとベクトル場の外積。 \(\mathrm{rot} \mathbf{E}(\mathbf{x})\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
+<p>ナブラとベクトル場の外積。 \(\mathrm{rot}\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
 
-<p>$$\mathrm{rot} f(\mathbf{x}) = \biggl( \frac{\partial E_z(\mathbf{x})}{\partial y} - \frac{\partial E_y(\mathbf{x})}{\partial z}, \frac{\partial E_x(\mathbf{x})}{\partial z} - \frac{\partial E_z(\mathbf{x})}{\partial x}, \frac{\partial E_y(\mathbf{x})}{\partial x} - \frac{\partial E_x(\mathbf{x})}{\partial y} \biggr)$$</p>
+<p>$$\mathrm{rot}\; f(\mathbf{E}) = \biggl( \frac{\partial E_z(\mathbf{x})}{\partial y} - \frac{\partial E_y(\mathbf{x})}{\partial z}, \frac{\partial E_x(\mathbf{x})}{\partial z} - \frac{\partial E_z(\mathbf{x})}{\partial x}, \frac{\partial E_y(\mathbf{x})}{\partial x} - \frac{\partial E_x(\mathbf{x})}{\partial y} \biggr)$$</p>
 
 <p>である。</p>
 
 <h3 id="ストークスの定理-1">ストークスの定理</h3>
 
 <p>任意のベクトル場 \(\mathbf{E}(\mathbf{x})\) に対して
-$$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot} \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS$$</p>
+$$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot}\; \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS$$</p>
 
 <p>が成立する。ただし \(C\) は閉曲線である。（証明は P42 から）</p>
 
@@ -154,7 +164,7 @@ $$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot} \mathbf{E}(\ma
 
 <p>の回転</p>
 
-<p>$$\mathrm{rot} \mathbf{E}(\mathbf{x}) = 0$$</p>
+<p>$$\mathrm{rot}\; \mathbf{E}(\mathbf{x}) = 0$$</p>
 
 <p>である（証明は P49 で）。つまり線積分</p>
 
@@ -162,7 +172,7 @@ $$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot} \mathbf{E}(\ma
 
 <p>が途中の道筋に依存しない。また、ある関数 \(\phi(\mathbf{x})\) の勾配で表すこともできる。</p>
 
-<p>$$\mathbf{E}(\mathbf{x}) = -\mathrm{grad} \phi(\mathbf{x})$$</p>
+<p>$$\mathbf{E}(\mathbf{x}) = -\mathrm{grad}\; \phi(\mathbf{x})$$</p>
 
 <p>これが静電ポテンシャル \(\phi(\mathbf{x})\) の定義である。この積分はそんなに難しくなく</p>
 
@@ -171,12 +181,65 @@ $$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot} \mathbf{E}(\ma
 <p>と簡単に解ける（積分定数を除く）。最初に出てきた式に代入し、正電荷 \(e\) をもつ点電荷を位置 \(\mathbf{z}_p\) から位置 \(\mathbf{z}_Q\) まで移動させるに外部からなすべき仕事の量は</p>
 
 <p>\begin{eqnarray}
-W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad} \phi(\mathbf{z}) \cdot d\mathbf{z} \\<br />
+W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad}\; \phi(\mathbf{z}) \cdot d\mathbf{z} \\<br />
 &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} d\phi(\mathbf{z}) \\<br />
 &amp;=&amp; e[\phi(\mathbf{z}_q) - \phi(\mathbf{z}_p)]
 \end{eqnarray}</p>
 
 <p>で与えられることがわかる。</p>
+
+<h1 id="5-静電場の基本法則">§5　静電場の基本法則</h1>
+
+<h3 id="ラプラシアン">ラプラシアン</h3>
+
+<p>勾配に対する分散。 \(\triangle\) または \(\nabla^2\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
+
+<p>$$\triangle\; \phi(\mathbf{x}) = \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2}$$</p>
+
+<p>である。</p>
+
+<h3 id="ポアッソンの方程式">ポアッソンの方程式</h3>
+
+<p>$$\triangle\; \phi(\mathbf{x}) = -\frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
+
+<p>のこと。</p>
+
+<h3 id="ポアッソンの方程式-1">ポアッソンの方程式</h3>
+
+<p>電荷密度が \(0\) の場所のポアッソンの方程式。つまり</p>
+
+<p>$$\triangle\; \phi(\mathbf{x}) = 0$$</p>
+
+<p>のこと。</p>
+
+<h3 id="静電場の基本法則">静電場の基本法則</h3>
+
+<p>静電場を規定する法則として</p>
+
+<p>\begin{eqnarray}
+\mathrm{div}\; \mathbf{E}(\mathbf{x}) &amp;=&amp; \frac{1}{\varepsilon_0} \rho(\mathbf{x}) \\<br />
+\mathrm{rot}\; \mathbf{E}(\mathbf{x}) &amp;=&amp; 0
+\end{eqnarray}</p>
+
+<p>が得られる。これらからクーロンの法則と遠隔作用の電場の式を導出するって P56 に書いてあるが、以下の説明が本当に導出になっているかどうかが不明である。</p>
+
+<p>静電ポテンシャルの定義により</p>
+
+<p>$$\mathrm{div}\;\mathrm{grad}\;\phi(\mathbf{x}) = -\frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
+
+<p>すなわち</p>
+
+<p>$$\triangle\;\phi(\mathbf{x}) = -\frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
+
+<p>が得られる。静電ポテンシャルの</p>
+
+<p>$$\phi(\mathbf{x}) = \frac{1}{4 \pi \varepsilon_0} \int_{-\infty}^{\infty} \frac{\rho(\mathbf{x&rsquo;})}{|\mathbf{x} - \mathbf{x&rsquo;}|}d^3x&rsquo;$$</p>
+
+<p>が上のポアッソンの方程式に満たすことがわかる。ゆえにポアッソンの方程式の解は</p>
+
+<p>$$\phi(\mathbf{x}) = \phi^{(0)}(\mathbf{x}) + \frac{1}{4 \pi \varepsilon_0} \int_{-\infty}^{\infty} \frac{\rho(\mathbf{x&rsquo;})}{|\mathbf{x} - \mathbf{x&rsquo;}|}d^3x&rsquo;$$</p>
+
+<p>となる。ただし \(\phi^{(0)}(\mathbf{x})\) がラプラス方程式の解である。</p>
                 </section>
             </article>
 
