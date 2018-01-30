@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="電磁気学　読書ノート（５）"/>
+  <meta name="twitter:description" content="誘電体中の静電場"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>電磁気学　読書ノート（５） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        電磁気学　読書ノート（５）
+                    </h1>
+                    <h2 class="headline">
+                    Jan 30, 2018 20:47
+                    · 529 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6">電磁気学</a>
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E8%AA%AD%E6%9B%B8%E3%83%8E%E3%83%BC%E3%83%88">読書ノート</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#7-誘電体中の静電場">§7　誘電体中の静電場</a>
+<ul>
+<li><a href="#基本法則">基本法則</a>
+<ul>
+<li><a href="#分子電場-局所電場">分子電場（局所電場）</a></li>
+<li><a href="#電束密度">電束密度</a></li>
+<li><a href="#誘電率">誘電率</a></li>
+<li><a href="#誘電体中の法則">誘電体中の法則</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="7-誘電体中の静電場">§7　誘電体中の静電場</h1>
+
+<h2 id="基本法則">基本法則</h2>
+
+<h3 id="分子電場-局所電場">分子電場（局所電場）</h3>
+
+<p>静電誘導によって多くの原子が電気双極子になり、これらの分極した原子のつくる重ね合った電場のこと。目に見える現象としては帯電体の表面 \(S_0\) の上に逆の電荷が集まること（詳しくは P88 の図 1.42 で）。この分極電荷の値は</p>
+
+<p>$$-\int_{S_0} \mathbf{P}(\mathbf{x&rsquo;}) \cdot \mathbf{n}(\mathbf{x&rsquo;}) dS$$</p>
+
+<p>で与えられる。ただし \(\mathbf{P}(\mathbf{x})\) は分極ベクトル（単位面積を通過する正電荷の大きさの方向）である。</p>
+
+<h3 id="電束密度">電束密度</h3>
+
+<p>表面 \(S_0\) ではなく帯電体を囲む任意の閉曲面 \(S\) にガウスの法則を適用すると</p>
+
+<p>$$\int_S \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS = \frac{1}{\varepsilon_0} \left(Q_e - \int_{S_0} \mathbf{P}(\mathbf{x&rsquo;}) \cdot \mathbf{n}(\mathbf{x&rsquo;}) dS\right)$$</p>
+
+<p>が成立する。ここの \(Q_e\) は帯電体の実際にもつ電荷で、<strong>真電荷</strong> という。また、任意の \(S\) に対して \(\int_{S} \mathbf{P}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS\) の値が同じなので上式が</p>
+
+<p>$$\int_S \left(\varepsilon_0 \mathbf{E}(\mathbf{x}) + \mathbf{P}(\mathbf{x})\right) \cdot \mathbf{n}(\mathbf{x}) dS = Q_e$$</p>
+
+<p>に変形できる。真空時のガウスの法則と比較すると、同じ真電荷で作られた電場の強さが小さくなり、同じ強さの電場を作る真電荷の大きさが大きくなる。これはコンデンサーの原理でもある。また、</p>
+
+<p>$$\mathbf{D}(\mathbf{x}) = \varepsilon_0 \mathbf{E}(\mathbf{x}) + \mathbf{P}(\mathbf{x})$$</p>
+
+<p>を一つの変数にすると</p>
+
+<p>$$\int_S \mathbf{D}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS = Q_e$$</p>
+
+<p>とガウスの法則っぽく書くことができる。この \(\mathbf{D}(\mathbf{x})\) が<strong>電束密度</strong> という。</p>
+
+<h3 id="誘電率">誘電率</h3>
+
+<p>多くの誘電体に対して</p>
+
+<p>$$\mathbf{P}(\mathbf{x}) = \chi_e \mathbf{E}(\mathbf{x})$$</p>
+
+<p>が成立する。電束密度の定義に代入して</p>
+
+<p>$$\mathbf{D}(\mathbf{x}) = (\varepsilon_0 + \chi_e) \mathbf{E}(\mathbf{x})$$</p>
+
+<p>となる。さらに<strong>誘電率</strong> \(\varepsilon = \varepsilon_0 + \chi_e\) と定義すると</p>
+
+<p>$$\mathbf{D}(\mathbf{x}) = \varepsilon \mathbf{E}(\mathbf{x})$$</p>
+
+<p>と書くことができる。</p>
+
+<h3 id="誘電体中の法則">誘電体中の法則</h3>
+
+<p>以前のすべての式の \(\varepsilon_0\) を \(\varepsilon\) に書き換えると誘電体中でも成立する。</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f10%2f - %e9%9b%bb%e7%a3%81%e6%b0%97%e5%ad%a6%e3%80%80%e8%aa%ad%e6%9b%b8%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%ef%bc%95%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
