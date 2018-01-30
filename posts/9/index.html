@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="電磁気学　読書ノート（４）"/>
+  <meta name="twitter:description" content="静電場のエネルギーとマクスウェルの応力"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>電磁気学　読書ノート（４） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        電磁気学　読書ノート（４）
+                    </h1>
+                    <h2 class="headline">
+                    Jan 30, 2018 16:15
+                    · 813 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6">電磁気学</a>
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E8%AA%AD%E6%9B%B8%E3%83%8E%E3%83%BC%E3%83%88">読書ノート</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#6-静電場のエネルギーとマクスウェルの応力">§6　静電場のエネルギーとマクスウェルの応力</a>
+<ul>
+<li><a href="#静電場のエネルギー">静電場のエネルギー</a>
+<ul>
+<li><a href="#静電容量">静電容量</a></li>
+<li><a href="#導体のもつ静電エネルギー">導体のもつ静電エネルギー</a></li>
+<li><a href="#空間に蓄えられる静電エネルギー">空間に蓄えられる静電エネルギー</a></li>
+</ul></li>
+<li><a href="#マクスウェルの応力">マクスウェルの応力</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="6-静電場のエネルギーとマクスウェルの応力">§6　静電場のエネルギーとマクスウェルの応力</h1>
+
+<h2 id="静電場のエネルギー">静電場のエネルギー</h2>
+
+<h3 id="静電容量">静電容量</h3>
+
+<p>孤立導体の電荷量 \(Q\) と、表面上の電位 \(\phi(S)\) と無限遠の電位 \(\phi(\infty)\) の電位差の比</p>
+
+<p>$$C = \frac{Q}{\phi(S) - \phi(\infty)}$$</p>
+
+<p>を<strong>静電容量</strong>という。表面上と無限遠電位差を \(1V\) だけ上昇させるために要する導体上の電荷増加量にも捉える。</p>
+
+<h3 id="導体のもつ静電エネルギー">導体のもつ静電エネルギー</h3>
+
+<p>微小量の電荷を次々と無限遠から導体に運び込み最終的に \(Q\) になるまでなすべき仕事の量</p>
+
+<p>\begin{eqnarray}
+W &amp;=&amp; \int dW \\<br />
+&amp;=&amp; \int_0^Q dQ \int_\infty^A\mathrm{grad}\;\phi(\mathbf{z}) \cdot d\mathbf{z} \\<br />
+&amp;=&amp; \int_0^Q [\phi(S) - \phi(\infty)] dQ \\<br />
+&amp;=&amp; \frac{1}{C} \int_0^Q QdQ \\<br />
+&amp;=&amp; \frac{Q^2}{2C}
+\end{eqnarray}</p>
+
+<p>これが導体のもつ静電エネルギー \(U_e\) になる。導体表面上の電位 \(\phi(S)\) がどこでも同じであるため、表面上で適当に点 \(A\) を選んでも良い。</p>
+
+<h3 id="空間に蓄えられる静電エネルギー">空間に蓄えられる静電エネルギー</h3>
+
+<p>「導体」そのものの代わりに「空間」が静電エネルギーを蓄えていると考える。</p>
+
+<p>\begin{eqnarray}
+U_e &amp;=&amp; \frac{Q^2}{2C} \\<br />
+&amp;=&amp; \frac{1}{2}\phi(S)Q \\<br />
+&amp;\vdots&amp; （詳しくは P73 と P74 で） \\<br />
+&amp;=&amp; \frac{1}{2} \varepsilon_0 \int \mathbf{E}^2(\mathbf{x}) d^3x
+\end{eqnarray}</p>
+
+<p>導体内部の静電場が \(0\) であるため全空間で積分しても良い。エネルギー密度は</p>
+
+<p>$$u_e(\mathbf{x}) = \frac{1}{2} \varepsilon_0 \mathbf{E}^2(\mathbf{x})$$</p>
+
+<p>で与えられる。</p>
+
+<h2 id="マクスウェルの応力">マクスウェルの応力</h2>
+
+<p>帯電体 \(2\) が自身を含まない任意の領域 \(1\) に作用する力は</p>
+
+<p>$$F = \int_V \rho_1(\mathbf{x}) \mathbf{E}_2(\mathbf{x}) d^3x$$</p>
+
+<p>であり、また領域 \(1\) の自己力（自身の電場が自分自身に働く力）が \(\mathbf{0}\) であるため</p>
+
+<p>$$F = \int_V \rho_1(\mathbf{x}) \mathbf{E}(\mathbf{x}) d^3x$$</p>
+
+<p>にも書ける。ただし \(\mathbf{E} = \mathbf{E_1} + \mathbf{E_2}\) 。微分形のガウスの法により</p>
+
+<p>$$\mathrm{div}\;\mathbf{E}(\mathbf{x}) = \frac{1}{\varepsilon_0} \bigl(\rho_1(\mathbf{x}) + \rho_2(\mathbf{x})\bigr)$$</p>
+
+<p>があるが、領域 \(1\) の内部では \(\rho_2(\mathbf{x})\) が常に \(0\) であるため</p>
+
+<p>$$\mathrm{div}\;\mathbf{E}(\mathbf{x}) = \frac{1}{\varepsilon_0} \rho_1(\mathbf{x})$$</p>
+
+<p>となる。二番目の式に代入して</p>
+
+<p>$$F = \int_V \mathbf{E}(\mathbf{x})\;\mathrm{div}\;\mathbf{E}(\mathbf{x}) d^3x$$</p>
+
+<p>が得られ、全体の電場だけで表すことができた。上式に積の微分公式を使って \(x\) 成分別を考えると</p>
+
+<p>\begin{eqnarray}
+F_x &amp;=&amp; \int_V \left[\frac{\partial T_{xx}^{(e)}(\mathbf{x})}{\partial x} + \frac{\partial T_{xy}^{(e)}(\mathbf{x})}{\partial y} + \frac{\partial T_{xz}^{(e)}(\mathbf{x})}{\partial z}\right] d^3x &amp;=&amp; \int_V \mathrm{div}\;\mathbf{T}_x^{(e)} dV \\<br />
+F_y &amp;=&amp; \int_V \left[\frac{\partial T_{yx}^{(e)}(\mathbf{x})}{\partial x} + \frac{\partial T_{yy}^{(e)}(\mathbf{x})}{\partial y} + \frac{\partial T_{yz}^{(e)}(\mathbf{x})}{\partial z}\right] d^3x &amp;=&amp; \int_V \mathrm{div}\;\mathbf{T}_y^{(e)} dV \\<br />
+F_z &amp;=&amp; \int_V \left[\frac{\partial T_{zx}^{(e)}(\mathbf{x})}{\partial x} + \frac{\partial T_{zy}^{(e)}(\mathbf{x})}{\partial y} + \frac{\partial T_{zz}^{(e)}(\mathbf{x})}{\partial z}\right] d^3x &amp;=&amp; \int_V \mathrm{div}\;\mathbf{T}_z^{(e)} dV
+\end{eqnarray}</p>
+
+<p>と書くことができる。ただし</p>
+
+<p>$$\mathbf{T} =
+\left(
+  \begin{array}{ccc}
+    T_{xx}^{(e)} &amp; T_{xy}^{(e)} &amp; T_{xz}^{(e)} \\<br />
+    T_{yx}^{(e)} &amp; T_{yy}^{(e)} &amp; T_{yz}^{(e)} \\<br />
+    T_{zx}^{(e)} &amp; T_{zy}^{(e)} &amp; T_{zz}^{(e)}
+  \end{array}
+\right) = \left(
+  \begin{array}{ccc}
+    E_x^2 - \frac{1}{2} \mathbf{E}^2 &amp; E_x E_y &amp; E_x E_z \\<br />
+    E_y E_x &amp; E_y^2 - \frac{1}{2} \mathbf{E}^2 &amp; E_y E_z \\<br />
+    E_z E_x &amp; E_z E_y &amp; E_z^2 - \frac{1}{2} \mathbf{E}^2
+  \end{array}
+\right)$$</p>
+
+<p>はマクスウェルの応力テンソルという。微分形のガウスの法則で体積積分を面積分に変換すると</p>
+
+<p>\begin{eqnarray}
+F_x &amp;=&amp; \int_S \mathbf{T}_x^{(e)}(\mathbf{x}) \cdot \mathbf{n}_x(\mathbf{x}) dS \\<br />
+F_y &amp;=&amp; \int_S \mathbf{T}_y^{(e)}(\mathbf{x}) \cdot \mathbf{n}_y(\mathbf{x}) dS \\<br />
+F_z &amp;=&amp; \int_S \mathbf{T}_z^{(e)}(\mathbf{x}) \cdot \mathbf{n}_z(\mathbf{x}) dS \\<br />
+\mathbf{F} &amp;=&amp; \int_S \mathbf{T}^{(e)}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS
+\end{eqnarray}</p>
+
+<p>を<strong>マクスウェルの応力</strong>という。</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f9%2f - %e9%9b%bb%e7%a3%81%e6%b0%97%e5%ad%a6%e3%80%80%e8%aa%ad%e6%9b%b8%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%ef%bc%94%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

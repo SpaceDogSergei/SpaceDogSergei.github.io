@@ -6,10 +6,19 @@
     <description>Recent content in 物理 on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 30 Jan 2018 10:22:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jan 2018 16:15:49 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/categories/%E7%89%A9%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>電磁気学　読書ノート（４）</title>
+      <link>https://spacedogsergei.github.io/posts/9/</link>
+      <pubDate>Tue, 30 Jan 2018 16:15:49 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/9/</guid>
+      <description>§6 静電場のエネルギーとマクスウェルの応力 静電場のエネルギー 静電容量 孤立導体の電荷量 \(Q\) と、表面上の電位 \(\phi(S)\) と無限遠の電位 \(\phi(\infty)\) の電位差の比 $$C = \frac{Q}{\phi(S) -</description>
+    </item>
     
     <item>
       <title>電磁気学　読書ノート（３）</title>
