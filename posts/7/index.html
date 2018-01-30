@@ -199,7 +199,7 @@
 
 <p>関数 \(f(\mathbf{x})\) の傾き、すなわちナブラとの「積」。 \(\mathrm{grad}\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
 
-<p>$$\mathrm{grad} f(\mathbf{x}) = \biggl(\frac{\partial f(\mathbf{x})}{\partial x}, \frac{\partial f(\mathbf{x})}{\partial y}, \frac{\partial f(\mathbf{x})}{\partial z}\biggr)$$</p>
+<p>$$\mathrm{grad}\; f(\mathbf{x}) = \biggl(\frac{\partial f(\mathbf{x})}{\partial x}, \frac{\partial f(\mathbf{x})}{\partial y}, \frac{\partial f(\mathbf{x})}{\partial z}\biggr)$$</p>
 
 <p>である。ランクが一つ上がるのがわかる。</p>
 
@@ -207,7 +207,7 @@
 
 <p>ベクトル場における単位時間当たりの位置 \(\mathbf{x}\) から「なんらかの物質」の「発散量」（詳しい説明は P35 で）、すなわちナブラとの「内積」。 \(\mathrm{div}\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
 
-<p>$$\mathrm{div} \mathbf{E}(\mathbf{x}) = \frac{\partial E_x(\mathbf{x})}{\partial x} + \frac{\partial E_y(\mathbf{x})}{\partial y} + \frac{\partial E_z(\mathbf{x})}{\partial z}$$</p>
+<p>$$\mathrm{div}\; \mathbf{E}(\mathbf{x}) = \frac{\partial E_x(\mathbf{x})}{\partial x} + \frac{\partial E_y(\mathbf{x})}{\partial y} + \frac{\partial E_z(\mathbf{x})}{\partial z}$$</p>
 
 <p>である。ランクが一つ下がるのがわかる。</p>
 
@@ -215,19 +215,19 @@
 
 <p>P34 の計算から微小面 \(S_i\) の面積分が</p>
 
-<p>$$\int_{S_i} \mathbf{E}(\mathbf{x_i}) \cdot \mathbf{n}(\mathbf{x_i}) dS_i = \mathrm{div} \mathbf{E}(\mathbf{x_i}) \Delta^3 x_i$$</p>
+<p>$$\int_{S_i} \mathbf{E}(\mathbf{x_i}) \cdot \mathbf{n}(\mathbf{x_i}) dS_i = \mathrm{div}\;  \mathbf{E}(\mathbf{x_i}) \Delta^3 x_i$$</p>
 
 <p>にも書くことができ、また内部（表面以外）の積分が相殺して消えるので、</p>
 
-<p>$$\int_{S} \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS = \int_{V} \mathrm{div} \mathbf{E}(\mathbf{x}) d^3 x$$</p>
+<p>$$\int_{S} \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS = \int_{V} \mathrm{div}\; \mathbf{E}(\mathbf{x}) d^3 x$$</p>
 
 <p>の関係をうる。最初に言ったように面積分を体積積分に変換する公式である。積分形と比較すると</p>
 
-<p>$$\int_{V} \mathrm{div} \mathbf{E}(\mathbf{x}) d^3 x = \frac{1}{\varepsilon_0} \int_V \rho(\mathbf{x}) d^3 x$$</p>
+<p>$$\int_{V} \mathrm{div}\; \mathbf{E}(\mathbf{x}) d^3 x = \frac{1}{\varepsilon_0} \int_V \rho(\mathbf{x}) d^3 x$$</p>
 
 <p>がわかって、したがって</p>
 
-<p>$$\mathrm{div} \mathbf{E}(\mathbf{x}) = \frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
+<p>$$\mathrm{div}\; \mathbf{E}(\mathbf{x}) = \frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
 
 <p>が成立する。これが微分形のガウスの法則である。</p>
 
