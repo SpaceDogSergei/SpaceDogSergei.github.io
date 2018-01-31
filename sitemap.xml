@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://spacedogsergei.github.io/posts/11/</loc>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://spacedogsergei.github.io/posts/10/</loc>
     <lastmod>2018-01-30T20:47:10+09:00</lastmod>
   </url>
@@ -77,19 +82,31 @@
   
   <url>
     <loc>https://spacedogsergei.github.io/posts/</loc>
-    <lastmod>2018-01-30T20:47:10+09:00</lastmod>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://spacedogsergei.github.io/</loc>
-    <lastmod>2018-01-30T20:47:10+09:00</lastmod>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://spacedogsergei.github.io/tags/</loc>
     <lastmod>2018-01-24T00:48:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://spacedogsergei.github.io/tags/%E4%BA%94%E9%96%80%E6%96%89/</loc>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://spacedogsergei.github.io/tags/%E6%89%8B%E5%BD%B9%E7%A0%94%E7%A9%B6/</loc>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,7 +142,7 @@
   
   <url>
     <loc>https://spacedogsergei.github.io/categories/%E9%BA%BB%E9%9B%80/</loc>
-    <lastmod>2018-01-28T00:53:52+09:00</lastmod>
+    <lastmod>2018-01-31T19:43:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
