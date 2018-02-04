@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="Flash から牌譜生成（１）"/>
+  <meta name="twitter:description" content="手牌と捨牌が判定できるようになった"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>Flash から牌譜生成（１） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Flash から牌譜生成（１）
+                    </h1>
+                    <h2 class="headline">
+                    Feb 4, 2018 22:32
+                    · 450 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E7%89%8C%E8%AD%9C%E7%94%9F%E6%88%90">牌譜生成</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#手牌判定">手牌判定</a></li>
+<li><a href="#捨牌判定">捨牌判定</a></li>
+<li><a href="#これから">これから</a>
+<ul>
+<li><a href="#ツモ牌判定">ツモ牌判定</a></li>
+<li><a href="#鳴き判定">鳴き判定</a></li>
+<li><a href="#点数計算">点数計算</a></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<p>このテーマの目標は例の Flash のサイトから牌譜を生成する。2、3 日 OpenCV 勉強したのでとりあえず途中経過を書いとく。</p>
+
+<h1 id="手牌判定">手牌判定</h1>
+
+<p>まずはあらかじめ四人分の全種類の牌画像を抽出する。いろんな手牌から適切な部分を切り取ればいいんだが、とにかくだるい。OpenCV にまだ慣れてないこともあってこれだけで 3 時間ぐらいかかった。あとは template matching で全種類の牌がそれずれ何枚あるのかを計算すればいい。</p>
+
+<p>
+<figure >
+    
+        <img src="/imgs/12-1.png" width="100%" />
+    
+    
+</figure>
+
+
+<figure >
+    
+        <img src="/imgs/12-2.png" width="100%" />
+    
+    
+</figure>
+</p>
+
+<p>11~19 がマンズ、21~29 がソウズ、31~39 がピンズ、41~47 が字牌（順番は日本式の白発中）。アルゴリズムを考えるとさすがに誤りは起こらないだろう。</p>
+
+<h1 id="捨牌判定">捨牌判定</h1>
+
+<p>手牌判定と同じことをやればいい…と思ったら位置によって次の牌の置く座標が違うし改行もするしさらにだるくなった。枚数数えなくて良いということ以外はがほぼ一緒なので、時間かけたがこれも難なく完成。</p>
+
+<p>
+<figure >
+    
+        <img src="/imgs/12-3.png" width="100%" />
+    
+    
+</figure>
+
+
+<figure >
+    
+        <img src="/imgs/12-4.png" width="100%" />
+    
+    
+</figure>
+</p>
+
+<h1 id="これから">これから</h1>
+
+<h2 id="ツモ牌判定">ツモ牌判定</h2>
+
+<p>手牌の画像そのまま使い回しても大丈夫そう。</p>
+
+<h2 id="鳴き判定">鳴き判定</h2>
+
+<p>まだいい解決策が見つけてない。現段階の考えは捨牌判定したあと誰かの手牌の座標が変わったかどうかが、これだと時間効率が悪いので却下した。</p>
+
+<h2 id="点数計算">点数計算</h2>
+
+<p>自分でアルゴリズムを再実装よりリザルト画面で文字に対して template matching したほうが楽だろう。</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f12%2f - Flash%20%e3%81%8b%e3%82%89%e7%89%8c%e8%ad%9c%e7%94%9f%e6%88%90%ef%bc%88%ef%bc%91%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>

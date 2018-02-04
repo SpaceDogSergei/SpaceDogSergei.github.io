@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>牌譜生成 on Sputnik2</title>
+    <link>https://spacedogsergei.github.io/tags/%E7%89%8C%E8%AD%9C%E7%94%9F%E6%88%90/</link>
+    <description>Recent content in 牌譜生成 on Sputnik2</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 04 Feb 2018 22:32:17 +0900</lastBuildDate>
+    
+	<atom:link href="https://spacedogsergei.github.io/tags/%E7%89%8C%E8%AD%9C%E7%94%9F%E6%88%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Flash から牌譜生成（１）</title>
+      <link>https://spacedogsergei.github.io/posts/12/</link>
+      <pubDate>Sun, 04 Feb 2018 22:32:17 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/12/</guid>
+      <description>このテーマの目標は例の Flash のサイトから牌譜を生成する。2、3 日 OpenCV 勉強したのでとりあえず途中経過を書いとく。 手牌判定 まずはあらかじめ四人分の全種</description>
+    </item>
+    
+  </channel>
+</rss>

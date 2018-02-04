@@ -6,10 +6,19 @@
     <description>Recent content on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 31 Jan 2018 19:43:53 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 04 Feb 2018 22:32:17 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flash から牌譜生成（１）</title>
+      <link>https://spacedogsergei.github.io/posts/12/</link>
+      <pubDate>Sun, 04 Feb 2018 22:32:17 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/12/</guid>
+      <description>このテーマの目標は例の Flash のサイトから牌譜を生成する。2、3 日 OpenCV 勉強したのでとりあえず途中経過を書いとく。 手牌判定 まずはあらかじめ四人分の全種</description>
+    </item>
     
     <item>
       <title>手役研究（１）　五門斉（１）</title>
