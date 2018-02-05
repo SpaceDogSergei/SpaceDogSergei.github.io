@@ -70,7 +70,7 @@
                     </h1>
                     <h2 class="headline">
                     Jan 30, 2018 16:15
-                    · 813 words
+                    · 986 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -161,7 +161,7 @@ U_e &amp;=&amp; \frac{Q^2}{2C} \\<br />
 
 <p>$$F = \int_V \rho_1(\mathbf{x}) \mathbf{E}(\mathbf{x}) d^3x$$</p>
 
-<p>にも書ける。ただし \(\mathbf{E} = \mathbf{E_1} + \mathbf{E_2}\) 。微分形のガウスの法により</p>
+<p>にも書ける。ただし \(\mathbf{E} = \mathbf{E_1} + \mathbf{E_2}\) 。微分形のガウスの法則により</p>
 
 <p>$$\mathrm{div}\;\mathbf{E}(\mathbf{x}) = \frac{1}{\varepsilon_0} \bigl(\rho_1(\mathbf{x}) + \rho_2(\mathbf{x})\bigr)$$</p>
 
@@ -171,7 +171,7 @@ U_e &amp;=&amp; \frac{Q^2}{2C} \\<br />
 
 <p>となる。二番目の式に代入して</p>
 
-<p>$$F = \int_V \mathbf{E}(\mathbf{x})\;\mathrm{div}\;\mathbf{E}(\mathbf{x}) d^3x$$</p>
+<p>$$F = \varepsilon_0 \int_V \mathbf{E}(\mathbf{x})\;\mathrm{div}\;\mathbf{E}(\mathbf{x}) d^3x$$</p>
 
 <p>が得られ、全体の電場だけで表すことができた。上式に積の微分公式を使って \(x\) 成分別を考えると</p>
 
@@ -190,7 +190,7 @@ F_z &amp;=&amp; \int_V \left[\frac{\partial T_{zx}^{(e)}(\mathbf{x})}{\partial x
     T_{yx}^{(e)} &amp; T_{yy}^{(e)} &amp; T_{yz}^{(e)} \\<br />
     T_{zx}^{(e)} &amp; T_{zy}^{(e)} &amp; T_{zz}^{(e)}
   \end{array}
-\right) = \left(
+\right) = \varepsilon_0 \left(
   \begin{array}{ccc}
     E_x^2 - \frac{1}{2} \mathbf{E}^2 &amp; E_x E_y &amp; E_x E_z \\<br />
     E_y E_x &amp; E_y^2 - \frac{1}{2} \mathbf{E}^2 &amp; E_y E_z \\<br />
@@ -201,13 +201,38 @@ F_z &amp;=&amp; \int_V \left[\frac{\partial T_{zx}^{(e)}(\mathbf{x})}{\partial x
 <p>は<strong>マクスウェルの応力テンソル</strong>という。微分形のガウスの法則で体積積分を面積分に変換すると</p>
 
 <p>\begin{eqnarray}
-F_x &amp;=&amp; \int_S \mathbf{T}_x^{(e)}(\mathbf{x}) \cdot \mathbf{n}_x(\mathbf{x}) dS \\<br />
-F_y &amp;=&amp; \int_S \mathbf{T}_y^{(e)}(\mathbf{x}) \cdot \mathbf{n}_y(\mathbf{x}) dS \\<br />
-F_z &amp;=&amp; \int_S \mathbf{T}_z^{(e)}(\mathbf{x}) \cdot \mathbf{n}_z(\mathbf{x}) dS \\<br />
+F_x &amp;=&amp; \int_S \mathbf{T}_x^{(e)}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS \\<br />
+F_y &amp;=&amp; \int_S \mathbf{T}_y^{(e)}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS \\<br />
+F_z &amp;=&amp; \int_S \mathbf{T}_z^{(e)}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS \\<br />
 \mathbf{F} &amp;=&amp; \int_S \mathbf{T}^{(e)}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS
 \end{eqnarray}</p>
 
 <p>を<strong>マクスウェルの応力</strong>という。</p>
+
+<p>等電位面に作用する力を考える。\(\mathbf{T}^{(e)}(\mathbf{x})\) と \(\mathbf{n}(\mathbf{x})\) が同じ方向のため</p>
+
+<p>$$\mathbf{E} = E \mathbf{n}(\mathbf{x})$$</p>
+
+<p>である。\(x\) 方向の応力テンソルは</p>
+
+<p>\begin{eqnarray}
+T_{xx}^{(e)} &amp;=&amp; \frac{\varepsilon_0 E^2}{2} (n_x^2 - n_y^2 - n_z^2) \\<br />
+T_{xy}^{(e)} &amp;=&amp; \varepsilon_0 E^2 n_x n_y \\<br />
+T_{xz}^{(e)} &amp;=&amp; \varepsilon_0 E^2 n_x n_z
+\end{eqnarray}</p>
+
+<p>ある微小面 \(\Delta S\) に作用する力は</p>
+
+<p>\begin{eqnarray}
+\Delta F_x &amp;=&amp; (T_{xx}^{(e)} n_x + T_{xy}^{(e)} n_y + T_{xz}^{(e)} n_z) \Delta S \\<br />
+&amp;=&amp; \frac{\varepsilon_0 E^2}{2} n_x \Delta S
+\end{eqnarray}</p>
+
+<p>ほかの成分の同様に計算すると</p>
+
+<p>$$\frac{\Delta \mathbf{F}}{\Delta S} = \frac{\varepsilon_0 E^2}{2} \mathbf{n}(\mathbf{x})$$</p>
+
+<p>と圧力がわかる。</p>
 
                 </section>
             </article>
