@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="電磁気学　読書ノート（７）"/>
+  <meta name="twitter:description" content="定常電流の分布"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>電磁気学　読書ノート（７） &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        電磁気学　読書ノート（７）
+                    </h1>
+                    <h2 class="headline">
+                    Feb 6, 2018 16:04
+                    · 298 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6">電磁気学</a>
+                          
+                              <a href="https://spacedogsergei.github.io/tags/%E8%AA%AD%E6%9B%B8%E3%83%8E%E3%83%BC%E3%83%88">読書ノート</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#第-2-章-定常電流">第 2 章　定常電流</a>
+<ul>
+<li><a href="#3-定常電流の分布">§3　定常電流の分布</a>
+<ul>
+<li><a href="#キルヒホッフの法則">キルヒホッフの法則</a></li>
+<li><a href="#定常電流の空間的分布">定常電流の空間的分布</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="第-2-章-定常電流">第 2 章　定常電流</h1>
+
+<h2 id="3-定常電流の分布">§3　定常電流の分布</h2>
+
+<h3 id="キルヒホッフの法則">キルヒホッフの法則</h3>
+
+<p>太さを無視できる細い導線による回路について</p>
+
+<ul>
+<li>第一法則：電気回路の任意の分岐点において、流れ込む電流の総和は \(0\) である。</li>
+</ul>
+
+<p>$$\sum_{i} I_i = 0$$</p>
+
+<ul>
+<li>第二法則：電気回路の任意の閉路における起電力の代数和は電圧降下の代数和に等しい。</li>
+</ul>
+
+<p>$$\sum_{i} \phi_i^{ex} = \sum_{i} R_i I_i$$</p>
+
+<h3 id="定常電流の空間的分布">定常電流の空間的分布</h3>
+
+<p>有限の広がりをもつ導体を考える。定常電流の空間的分布を決める基本法則は：</p>
+
+<p>\begin{eqnarray}
+\mathrm{div}\;\mathbf{i}(\mathbf{x}) &amp;=&amp; 0 &amp;（保存則） \\<br />
+\mathbf{i}(\mathbf{x}) &amp;=&amp; \sigma \mathbf{E}(\mathbf{x}) &amp;（オームの法則） \\<br />
+\mathrm{rot}\;\mathbf{E}(\mathbf{x}) &amp;=&amp; 0 &amp;（定常）
+\end{eqnarray}</p>
+
+<p>これらは電荷密度 \(\rho_e(\mathbf{x}) = 0\) の場所で成立する静電場の基本法則</p>
+
+<p>\begin{eqnarray}
+\mathrm{div}\;\mathbf{D}(\mathbf{x}) &amp;=&amp; 0 \\<br />
+\mathbf{D}(\mathbf{x}) &amp;=&amp; \varepsilon \mathbf{E}_s(\mathbf{x}) \\<br />
+\mathrm{rot}\;\mathbf{E}_s(\mathbf{x}) &amp;=&amp; 0
+\end{eqnarray}</p>
+
+<p>とほぼ一致する。したがって、導体内の電場と静電場は同一の関数で表すことができる。</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f14%2f - %e9%9b%bb%e7%a3%81%e6%b0%97%e5%ad%a6%e3%80%80%e8%aa%ad%e6%9b%b8%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%ef%bc%97%ef%bc%89 by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
