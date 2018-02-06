@@ -70,7 +70,7 @@
                     </h1>
                     <h2 class="headline">
                     Jan 30, 2018 10:22
-                    · 883 words
+                    · 890 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -89,6 +89,8 @@
                   
                     <div id="toc">
                       <nav id="TableOfContents">
+<ul>
+<li><a href="#第-1-章-静電場">第 1 章　静電場</a>
 <ul>
 <li><a href="#4-静電ポテンシャル">§4　静電ポテンシャル</a>
 <ul>
@@ -109,6 +111,7 @@
 </ul></li>
 <li><a href="#静電場の基本法則">静電場の基本法則</a></li>
 </ul></li>
+</ul></li>
 </ul>
 </nav>
                     </div>
@@ -117,11 +120,13 @@
                 <section id="post-body">
                     
 
-<h1 id="4-静電ポテンシャル">§4　静電ポテンシャル</h1>
+<h1 id="第-1-章-静電場">第 1 章　静電場</h1>
 
-<h2 id="ストークスの定理">ストークスの定理</h2>
+<h2 id="4-静電ポテンシャル">§4　静電ポテンシャル</h2>
 
-<h3 id="線積分">線積分</h3>
+<h3 id="ストークスの定理">ストークスの定理</h3>
+
+<h4 id="線積分">線積分</h4>
 
 <p>面積分と似たような感じでの定義</p>
 
@@ -138,7 +143,7 @@ W &amp;=&amp; \int_C \mathbf{F}(\mathbf{z}) \cdot d\mathbf{z} \\<br />
 
 <p>になる。</p>
 
-<h3 id="回転">回転</h3>
+<h4 id="回転">回転</h4>
 
 <p>ナブラとベクトル場の外積。 \(\mathrm{rot}\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
 
@@ -146,14 +151,14 @@ W &amp;=&amp; \int_C \mathbf{F}(\mathbf{z}) \cdot d\mathbf{z} \\<br />
 
 <p>である。</p>
 
-<h3 id="ストークスの定理-1">ストークスの定理</h3>
+<h4 id="ストークスの定理-1">ストークスの定理</h4>
 
 <p>任意のベクトル場 \(\mathbf{E}(\mathbf{x})\) に対して
 $$\int_C \mathbf{E}(\mathbf{x}) d\mathbf{x} = \int_S \mathrm{rot}\; \mathbf{E}(\mathbf{x}) \cdot \mathbf{n}(\mathbf{x}) dS$$</p>
 
 <p>が成立する。ただし \(C\) は閉曲線である。（証明は P42 から）</p>
 
-<h2 id="静電ポテンシャル">静電ポテンシャル</h2>
+<h3 id="静電ポテンシャル">静電ポテンシャル</h3>
 
 <p>電荷が連続的に分布しているときの静電場</p>
 
@@ -185,9 +190,9 @@ W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad}\; \phi(\mathbf{z
 
 <p>で与えられることがわかる。</p>
 
-<h1 id="5-静電場の基本法則">§5　静電場の基本法則</h1>
+<h2 id="5-静電場の基本法則">§5　静電場の基本法則</h2>
 
-<h2 id="ラプラシアン">ラプラシアン</h2>
+<h3 id="ラプラシアン">ラプラシアン</h3>
 
 <p>勾配に対する分散。 \(\triangle\) または \(\nabla^2\) と書く。 \(x\)、\(y\)、\(z\) 三方向の場合</p>
 
@@ -195,13 +200,13 @@ W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad}\; \phi(\mathbf{z
 
 <p>である。</p>
 
-<h3 id="ポアッソンの方程式">ポアッソンの方程式</h3>
+<h4 id="ポアッソンの方程式">ポアッソンの方程式</h4>
 
 <p>$$\triangle\; \phi(\mathbf{x}) = -\frac{1}{\varepsilon_0} \rho(\mathbf{x})$$</p>
 
 <p>のこと。</p>
 
-<h3 id="ラプラスの方程式">ラプラスの方程式</h3>
+<h4 id="ラプラスの方程式">ラプラスの方程式</h4>
 
 <p>電荷密度が \(0\) の場所のポアッソンの方程式。つまり</p>
 
@@ -209,7 +214,7 @@ W &amp;=&amp; e\int_{\mathbf{z}_p}^{\mathbf{z}_q} \mathrm{grad}\; \phi(\mathbf{z
 
 <p>のこと。</p>
 
-<h2 id="静電場の基本法則">静電場の基本法則</h2>
+<h3 id="静電場の基本法則">静電場の基本法則</h3>
 
 <p>静電場を規定する法則として</p>
 

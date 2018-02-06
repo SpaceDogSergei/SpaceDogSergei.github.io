@@ -26,7 +26,7 @@
       <pubDate>Tue, 30 Jan 2018 20:47:10 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/10/</guid>
-      <description>§7 誘電体中の静電場 基本法則 分子電場（局所電場） 静電誘導によって多くの原子が電気双極子になり、これらの分極した原子のつくる重ね合った電場のこ</description>
+      <description>第 1 章 静電場 §7 誘電体中の静電場 基本法則 分子電場（局所電場） 静電誘導によって多くの原子が電気双極子になり、これらの分極した原子のつくる重ね合</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Tue, 30 Jan 2018 16:15:49 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/9/</guid>
-      <description>§6 静電場のエネルギーとマクスウェルの応力 静電場のエネルギー 静電容量 孤立導体の電荷量 \(Q\) と、表面上の電位 \(\phi(S)\) と無限遠の電位 \(\phi(\infty)\) の電位差の比 $$C = \frac{Q}{\phi(S) -</description>
+      <description>第 1 章 静電場 §6 静電場のエネルギーとマクスウェルの応力 静電場のエネルギー 静電容量 孤立導体の電荷量 \(Q\) と、表面上の電位 \(\phi(S)\) と無限遠の電位 \(\phi(\infty)\) の電位差</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 30 Jan 2018 10:22:31 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/8/</guid>
-      <description>§4 静電ポテンシャル ストークスの定理 線積分 面積分と似たような感じでの定義 $$\int_C \mathbf{E}(\mathbf{x}) \cdot d\mathbf{x} = \sum_P^Q \mathbf{E}(\mathbf{x_i}) \cdot \Delta \mathbf{x_i}$$ すなわちベクトル要素 \(\mathbf{E}\) と方向ベクトル \(\mathbf{x}\) の内積を曲</description>
+      <description>第 1 章 静電場 §4 静電ポテンシャル ストークスの定理 線積分 面積分と似たような感じでの定義 $$\int_C \mathbf{E}(\mathbf{x}) \cdot d\mathbf{x} = \sum_P^Q \mathbf{E}(\mathbf{x_i}) \cdot \Delta \mathbf{x_i}$$ すなわちベクトル要素 \(\mathbf{E}\) と方向ベクトル</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Tue, 30 Jan 2018 06:20:44 +0900</pubDate>
       
       <guid>https://spacedogsergei.github.io/posts/7/</guid>
-      <description>§3 ガウスの法則 ベクトル解析については「電磁場とベクトル解析」の解説が非常に詳しい。 積分形のガウスの法則 面積分 （ここでの）ガウスの法則の本質</description>
+      <description>第 1 章 静電場 §3 ガウスの法則 ベクトル解析については「電磁場とベクトル解析」の解説が非常に詳しい。 積分形のガウスの法則 面積分 （ここでの）ガウス</description>
     </item>
     
     <item>
