@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+			
+  
+    <meta name="twitter:card" content="summary"/>
+    
+      <meta name="twitter:image" content="https://spacedogsergei.github.io/images/avatar.png" />
+    
+  
+  
+  <meta name="twitter:title" content="一向聴のモデル"/>
+  <meta name="twitter:description" content="モデル設定 テンパイ時のモデルと同じルーティンで考える。パラメータも同じく： \(t\): 巡目。1 から 21 までの整数 \(p_0\): 1牌あたりの自分のツモ率 \(\widetilde{p}_0\): 1牌あたりの"/>
+  
+    <meta name="twitter:site" content="@SpaceDogSergei"/>
+  
+  
+  
+  
+    <meta name="twitter:creator" content="@SpaceDog"/>
+  
+
+
+
+		
+		<meta name="author" content="SpaceDog">
+		<meta name="description" content="物理、麻雀、語学のことについて">
+		<meta name="generator" content="Hugo 0.33" />
+		<title>一向聴のモデル &middot; Sputnik2</title>
+		<link rel="shortcut icon" href="https://spacedogsergei.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/style.css">
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://spacedogsergei.github.io/css/font-awesome.min.css">
+		
+
+		
+
+		
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://spacedogsergei.github.io/'> <span class="arrow">←</span>ホーム</a>
+	
+	<a href='https://spacedogsergei.github.io/posts'>アーカイブ</a>
+	<a href='https://spacedogsergei.github.io/categories'>カテゴリー</a>
+	<a href='https://spacedogsergei.github.io/tags'>タグ</a>
+	<a href='https://spacedogsergei.github.io/about'>このブログについて</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        一向聴のモデル
+                    </h1>
+                    <h2 class="headline">
+                    Feb 7, 2018 14:09
+                    · 806 words
+                    · 2 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://spacedogsergei.github.io/tags/"></a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                  
+                    <div id="toc">
+                      <nav id="TableOfContents">
+<ul>
+<li><a href="#モデル設定">モデル設定</a></li>
+<li><a href="#例">例</a></li>
+</ul>
+</nav>
+                    </div>
+                  
+                
+                <section id="post-body">
+                    
+
+<h1 id="モデル設定">モデル設定</h1>
+
+<p><a href="https://spacedogsergei.github.io/posts/4/">テンパイ時のモデル</a>と同じルーティンで考える。パラメータも同じく：</p>
+
+<ul>
+<li>\(t\): 巡目。1 から 21 までの整数</li>
+<li>\(p_0\): 1牌あたりの自分のツモ率</li>
+<li>\(\widetilde{p}_0\): 1牌あたりの自分の出アガリ率</li>
+<li>\(p_1\): 1牌あたりの下家のツモ率</li>
+<li>\(\widetilde{p}_1\): 1牌あたりの下家の出アガリ率</li>
+<li>\(p_2\): 1牌あたりの対面のツモ率</li>
+<li>\(\widetilde{p}_2\): 1牌あたりの対面の出アガリ率</li>
+<li>\(r_1\): 現在自分が切ろうとする牌の下家への放銃率</li>
+<li>\(r_2\): 現在自分が切ろうとする牌の対面への放銃率</li>
+<li>\(w_{0,t}\): \(t\) 巡目で自分のツモ率</li>
+<li>\(\widetilde{w}_{0,t}\): \(t\) 巡目で自分の出アガリ率</li>
+<li>\(w_{1,t}\): \(t\)巡目で下家のツモ率</li>
+<li>\(\widetilde{w}_{1,t}\): \(t\) 巡目で下家の自分からの出アガリ率</li>
+<li>\(\widehat{w}_{1,t}\): \(t\) 巡目で下家の対面からの出アガリ率</li>
+<li>\(w_{2,t}\): \(t\)巡目で対面のツモ率</li>
+<li>\(\widetilde{w}_{2,t}\): \(t\) 巡目で対面の自分からの出アガリ率</li>
+<li>\(\widehat{w}_{2,t}\): \(t\) 巡目で対面の下家からの出アガリ率</li>
+<li>\(A_t\): \(t\) 巡目で攻める時の期待収支</li>
+<li>\(B_t\): \(t\) 巡目でオリる時の期待収支</li>
+<li>\(W_0\): 自分のツモ時の期待収支</li>
+<li>\(\widetilde{W}_0\): 自分の出アガリ時の期待収支</li>
+<li>\(W_1\): 下家のツモ時の期待収支（マイナス）</li>
+<li>\(\widetilde{W}_1\): 下家の自分から出アガリ時の期待収支（マイナス）</li>
+<li>\(\widehat{W}_1\): 下家の自分以外から出アガリ時の期待収支（マイナス）</li>
+<li>\(W_2\): 対面のツモ時の期待収支（マイナス）</li>
+<li>\(\widetilde{W}_2\): 対面の自分から出アガリ時の期待収支（マイナス）</li>
+<li>\(\widehat{W}_2\): 対面の自分以外から出アガリ時の期待収支（マイナス）</li>
+</ul>
+
+<p>新たに</p>
+
+<ul>
+<li>\(s\): 自分が次の巡目でテンパイできる確率</li>
+<li>\(C_t\): \(t\) 巡目で攻める時の期待収支（一向聴時）</li>
+</ul>
+
+<p>を追加する。</p>
+
+<p>自分以外に一人テンパイの場合：</p>
+
+<p>\begin{eqnarray}
+  C_t &amp;=&amp; \begin{cases}
+    r_1 \widetilde{W}_1 + (1 - r_1) \widetilde{p}_1 W_1 + (1 - r_1) (1 - \widetilde{p}_1) s A_t + (1 - r_1) (1 - \widetilde{p}_1) (1 - s) C_{t + 1} &amp; (1 \leq t \lt 21) \\<br />
+    0 &amp; (t = 21)
+  \end{cases}
+\end{eqnarray}</p>
+
+<p>ただし \(w&rsquo;_{0, t+1}\) と \(\widetilde{w}&rsquo;_{0, t+1}\) はテンパイ時のパラメータである。この漸化式を解いて</p>
+
+<p>$$C_t = (1 - \phi^{21 - t})\frac{r_1 \widetilde{W}_1 + (1 - r_1) \widetilde{p}_1 W_1 + (1 - r_1) (1 - \widetilde{p}_1) s A_t}{1 - \phi}$$</p>
+
+<p>が得られる。ただし、 \(\phi = (1 - r_1) (1 - \widetilde{p}_1) (1 - s)\) である。</p>
+
+<h1 id="例">例</h1>
+
+<p>同じく大三元の例を考える。ただし自分は愚形の一向聴。</p>
+
+<ul>
+<li>自分：<img src="/imgs/mj_pai/2m1.png"><img src="/imgs/mj_pai/m2.png"><img src="/imgs/mj_pai/m3.png">
+<img src="/imgs/mj_pai/p2.png"><img src="/imgs/mj_pai/p4.png"><img src="/imgs/mj_pai/p7.png"><img src="/imgs/mj_pai/s3.png"><img src="/imgs/mj_pai/s5.png"><img src="/imgs/mj_pai/s6.png"><img src="/imgs/mj_pai/s7.png"><img src="/imgs/mj_pai/s8.png"><img src="/imgs/mj_pai/j1.png"><img src="/imgs/mj_pai/j1.png">
+<img src="/imgs/mj_pai/m5.png"></li>
+<li>下家：<img src="/imgs/mj_pai/j5.png"><img src="/imgs/mj_pai/2j5.png"><img src="/imgs/mj_pai/j5.png">
+<img src="/imgs/mj_pai/2j6.png"><img src="/imgs/mj_pai/j6.png"><img src="/imgs/mj_pai/j6.png">
+<img src="/imgs/mj_pai/2j7.png"><img src="/imgs/mj_pai/j7.png"><img src="/imgs/mj_pai/j7.png">
+<img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"><img src="/imgs/mj_pai/j9.png"></li>
+</ul>
+
+<p>パラメータが以下のように：</p>
+
+<ul>
+<li>\(s \fallingdotseq 1 - (1 - \frac{1}{34}) * (1 - \frac{1}{34})\)</li>
+<li>\(\widetilde{p}_1 \fallingdotseq \frac{2}{34}\)</li>
+<li>\(r_1 \fallingdotseq \frac{2}{34} \)</li>
+<li>\(W = 51, \widetilde{W}_0 = 32, W_1 = -89, \widetilde{W}_1 = -88\)。</li>
+</ul>
+
+<p>以上の条件のもとで\(C_t\)と\(B_t\)のグラフを示す。</p>
+
+
+<figure >
+    
+        <img src="/imgs/15.png" width="100%" />
+    
+    
+</figure>
+
+
+<p>ほぼオリたほうが有利だと分かる。</p>
+
+                </section>
+            </article>
+
+            
+                <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fspacedogsergei.github.io%2fposts%2f15%2f - %e4%b8%80%e5%90%91%e8%81%b4%e3%81%ae%e3%83%a2%e3%83%87%e3%83%ab by @SpaceDogSergei"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+            
+
+            
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'sputnik2-1'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+            
+
+            
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.twitter.com/SpaceDogSergei">
+        <i class="fa fa-twitter-square"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+       © Copyright 2018 <i class="fa fa-heart" aria-hidden="true"></i> SpaceDog
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://spacedogsergei.github.io/js/jquery-2.2.4.min.js"></script>
+<script src="https://spacedogsergei.github.io/js/main.js"></script>
+<script src="https://spacedogsergei.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-112791689-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+    </body>
+</html>
