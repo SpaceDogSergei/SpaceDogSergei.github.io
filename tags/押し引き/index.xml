@@ -6,10 +6,19 @@
     <description>Recent content in 押し引き on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 28 Jan 2018 00:53:52 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 07 Feb 2018 14:09:36 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/tags/%E6%8A%BC%E3%81%97%E5%BC%95%E3%81%8D/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一向聴のモデル</title>
+      <link>https://spacedogsergei.github.io/posts/15/</link>
+      <pubDate>Wed, 07 Feb 2018 14:09:36 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/15/</guid>
+      <description>モデル設定 テンパイ時のモデルと同じルーティンで考える。パラメータも同じく： \(t\): 巡目。1 から 21 までの整数 \(p_0\): 1牌あたりの自分のツモ率 \(\widetilde{p}_0\): 1牌あたりの</description>
+    </item>
     
     <item>
       <title>テンパイ時の押し引き（４）　まとめ</title>
