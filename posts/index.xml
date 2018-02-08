@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 07 Feb 2018 14:09:36 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 08 Feb 2018 00:11:22 +0900</lastBuildDate>
     
 	<atom:link href="https://spacedogsergei.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一向聴時の押し引き（２）　モデル（２）</title>
+      <link>https://spacedogsergei.github.io/posts/16/</link>
+      <pubDate>Thu, 08 Feb 2018 00:11:22 +0900</pubDate>
+      
+      <guid>https://spacedogsergei.github.io/posts/16/</guid>
+      <description>モデル設定 今回は自分以外に二人テンパイの場合を考える。パラメータは同じく： \(t\): 巡目。1 から 21 までの整数 \(p_0\): 1牌あたりの自分のツモ率 \(\widetilde{p}_0\): 1牌あたりの</description>
+    </item>
     
     <item>
       <title>一向聴時の押し引き（１）　モデル（１）</title>
