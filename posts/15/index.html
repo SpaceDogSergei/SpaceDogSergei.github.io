@@ -70,7 +70,7 @@
                     </h1>
                     <h2 class="headline">
                     Feb 7, 2018 14:09
-                    · 806 words
+                    · 811 words
                     · 2 minute read
                       <span class="tags">
                       
@@ -146,13 +146,13 @@
 <p>\begin{eqnarray}
   C_t &amp;=&amp; \begin{cases}
     r_1 \widetilde{W}_1 + (1 - r_1) \widetilde{p}_1 W_1 + (1 - r_1) (1 - \widetilde{p}_1) s A_t + (1 - r_1) (1 - \widetilde{p}_1) (1 - s) C_{t + 1} &amp; (1 \leq t \lt 21) \\<br />
-    0 &amp; (t = 21)
+    B_t &amp; (t = 21)
   \end{cases}
 \end{eqnarray}</p>
 
-<p>ただし \(w&rsquo;_{0, t+1}\) と \(\widetilde{w}&rsquo;_{0, t+1}\) はテンパイ時のパラメータである。この漸化式を解いて</p>
+<p>ただし \(w&rsquo;_{0, t+1}\) と \(\widetilde{w}&rsquo;_{0, t+1}\) はテンパイ時のパラメータである。この漸化式を解くと</p>
 
-<p>$$C_t = (1 - \phi^{21 - t})\frac{r_1 \widetilde{W}_1 + (1 - r_1) \widetilde{p}_1 W_1 + (1 - r_1) (1 - \widetilde{p}_1) s A_t}{1 - \phi}$$</p>
+<p>$$C_t = (1 - \phi^{21 - t})\frac{r_1 \widetilde{W}_1 + (1 - r_1) \widetilde{p}_1 W_1 + (1 - r_1) (1 - \widetilde{p}_1) s A_t}{1 - \phi} + \phi^{21 - t} B_{21}$$</p>
 
 <p>が得られる。ただし、 \(\phi = (1 - r_1) (1 - \widetilde{p}_1) (1 - s)\) である。</p>
 
