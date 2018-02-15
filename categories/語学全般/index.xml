@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>雑記 on Sputnik2</title>
-    <link>https://spacedogsergei.github.io/tags/%E9%9B%91%E8%A8%98/</link>
-    <description>Recent content in 雑記 on Sputnik2</description>
+    <title>語学全般 on Sputnik2</title>
+    <link>https://spacedogsergei.github.io/categories/%E8%AA%9E%E5%AD%A6%E5%85%A8%E8%88%AC/</link>
+    <description>Recent content in 語学全般 on Sputnik2</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 13 Feb 2018 15:25:19 +0900</lastBuildDate>
     
-	<atom:link href="https://spacedogsergei.github.io/tags/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://spacedogsergei.github.io/categories/%E8%AA%9E%E5%AD%A6%E5%85%A8%E8%88%AC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://spacedogsergei.github.io/posts/18/</guid>
       <description>自分の語学の勉強スタイルとしては とりあえず初級文法を一回さらっと読み通す。この過程で最頻出語はだいたい覚えさせられる。 辞書を引きながら平易な</description>
-    </item>
-    
-    <item>
-      <title>麻雀の研究について</title>
-      <link>https://spacedogsergei.github.io/posts/1/</link>
-      <pubDate>Wed, 24 Jan 2018 17:02:13 +0900</pubDate>
-      
-      <guid>https://spacedogsergei.github.io/posts/1/</guid>
-      <description>「科学する麻雀」をはじめ、リーチ麻雀の理論的研究が十数年やられてきたが、ちゅんま（国際公式ルール麻雀）に関してはないに等しい。ずっと前からや</description>
     </item>
     
   </channel>
